@@ -1,0 +1,39 @@
+.img_gallary_Style {
+    width: 100px;
+    height: 100px;
+    border: 3px solid cyan;
+}
+
+.wa-style{
+	color: red;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .dl-custom dt {
+    float: left;
+    width: 100px;
+    overflow: hidden;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-custom dd {
+    margin-left: 0px;
+  }
+}
+
