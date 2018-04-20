@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //$config['base_url'] = 'http://127.0.0.1/public_html/adonwheels';
  $config['base_url'] = 'http://adonwheels.com';
-//$config['base_url'] = 'http://adonwheels.net';
+
 
 /*
 |--------------------------------------------------------------------------
