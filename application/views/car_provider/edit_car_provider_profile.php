@@ -11,7 +11,7 @@ $this->view('includes/header');
         <div class="page-header">
             <h3><?php echo $this->lang->line('edit_portfolio'); ?></h3>
             <a href="<?php echo base_url('index.php/car_provider/edit_sticker'); ?>">Edit sticker</a>
-            <a href="">Delete Image</a>
+            <a href="<?php echo base_url('index.php/car_provider/delete_image'); ?>">Delete Image</a>
         </div>
 
         <div class="col-md-6">  
