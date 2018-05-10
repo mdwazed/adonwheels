@@ -5,3 +5,5 @@ Delete image fucntionality
 action after requesting for ad
 redirect to log in page after session expire
 request for add page shows error if not logged in. show message for log in
+problem in profile page if no sticker is added by user
+

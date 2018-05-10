@@ -140,7 +140,81 @@ class Common_model extends CI_Model {
         $result_car_image = $query->result_array();
         return $result_car_image;
     }
-	
+
+    ///////send mail to intended email and data received through $data parameter ////////
+    public function send_mail($data){
+        //echo 'sending  mail<br>';
+
+        $this->load->library('email');
+
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://adonwheels.net',
+            'smtp_port' => 465,
+            'smtp_user' => 'admin@adonwheels.net',
+            'smtp_pass' => '1qaz2wsx3edc',
+            'smtp_timeout' => 10,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8'
+        );
+
+        /* $config = Array(
+             'protocol' => 'smtp',
+             'smtp_host' => 'ssl://smtp.googlemail.com',
+             'smtp_port' => 465,
+             'smtp_user' => 'wazed6077@gmail.com',
+             'smtp_pass' => '',
+             'smtp_timeout' => 10,
+             'mailtype'  => 'html',
+             'charset'   => 'utf-8'
+         );*/
+
+        /*$config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://mail.technovabd.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'admin@technovabd.com',
+            'smtp_pass' => '',
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8'
+        );*/
+
+        $this->email->initialize($config);
+        $this->email->set_mailtype("html");
+        $this->email->set_newline("\r\n");
+
+
+        /*//Email content
+        $htmlContent = '<h1>Your passowrd has been reset at Ad on Wheels</h1>';
+        $htmlContent .= '<p>'.$data['message'].'</p>';
+        $htmlContent .= '<h3>'.$data['password'].'</h3>';*/
+
+
+        $this->email->to($data['mail_to']);
+        $this->email->from('admin@adonwheels.net','Ad On Wheels');
+        $this->email->subject($data['subject']);
+        $this->email->message($data['message']);
+        //var_dump($data);
+
+        if($this->email->send()){
+            //echo 'email sent';
+            return TRUE;
+        }else{
+            echo $this->email->print_debugger();
+        }
+
+    }
+
+    public function save_clients_message($data){
+        $insert_data = array(
+            'msg_from' => $data['email'],
+            'msg_body' => $data['message']
+        );
+        if(!$this->db->insert('clients_message',$insert_data))
+            return false;
+        else
+            return true;
+    }
 
 }
 

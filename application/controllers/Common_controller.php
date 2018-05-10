@@ -31,8 +31,16 @@ class Common_controller extends CI_Controller {
 
 	public function process_contact_message(){
 		echo "processing contact message";
-		echo $_POST['email'];
-		echo $_POST['message'];
+		$data['email'] = $_POST['email'];
+		$data['message'] = $_POST['message'];
+//		print_r($data);
+        $this->load->model('Common_model');
+        if($this->Common_model->save_clients_message($data)){
+            $data['message'] = 'Thanks for your concern. "Ad on wheels" will do everything at its end';
+        }else{
+            $data['message'] = 'something went wrong';
+        }
+        $this->load->view('gen_views/success_message',$data);
 
 	}
 
@@ -48,6 +56,9 @@ class Common_controller extends CI_Controller {
 		redirect(base_url());
 		
 	}
+
+
+
 
 
 
