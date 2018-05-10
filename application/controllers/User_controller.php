@@ -164,7 +164,7 @@ class User_controller extends CI_Controller {
 		    'smtp_host' => 'ssl://adonwheels.net',
 		    'smtp_port' => 465,
 		    'smtp_user' => 'test@adonwheels.net',
-		    'smtp_pass' => '1qaz2wsx3edc',
+		    'smtp_pass' => '',
 		    'smtp_timeout' => 10,
 		    'mailtype'  => 'html', 
 		    'charset'   => 'utf-8'
@@ -175,7 +175,7 @@ class User_controller extends CI_Controller {
 		//     'smtp_host' => 'ssl://smtp.googlemail.com',
 		//     'smtp_port' => 465,
 		//     'smtp_user' => 'wazed6077@gmail.com',
-		//     'smtp_pass' => '01769114444',
+		//     'smtp_pass' => '',
 		//     'smtp_timeout' => 10,
 		//     'mailtype'  => 'html', 
 		//     'charset'   => 'utf-8'
@@ -186,7 +186,7 @@ class User_controller extends CI_Controller {
 		    'smtp_host' => 'ssl://mail.technovabd.com',
 		    'smtp_port' => 465,
 		    'smtp_user' => 'admin@technovabd.com',
-		    'smtp_pass' => '1qaz2wsx3edc',
+		    'smtp_pass' => '',
 		    'mailtype'  => 'html', 
 		    'charset'   => 'utf-8'
 		);*/

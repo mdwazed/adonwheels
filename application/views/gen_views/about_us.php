@@ -27,7 +27,7 @@ $this->view('includes/header');
                     <h4><?php echo $this->lang->line('contact_us'); ?></h4>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="<?php echo base_url(); ?>index.php/Common_controller/process_contact_message" method ="POST">
+                    <form class="form-horizontal" action="<?php echo base_url('index.php/Common_controller/process_contact_message'); ?>" method ="POST">
 
               <div class="form-group">
                 <label for="full_name" class="col-md-2 control-label"><?php echo $this->lang->line('full_name'); ?></label>
@@ -50,13 +50,6 @@ $this->view('includes/header');
                 </div>
               </div>
 
-              
-
-             
-
-             
-                  
-               
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                   <button type="submit" class="btn btn-default"><?php echo $this->lang->line('submit'); ?></button>
@@ -66,9 +59,7 @@ $this->view('includes/header');
                 </div>
             </div>  
         </div>         
-    </div>
-    <hr>    
 
-   
+    <hr>
 
 <?php $this->view('includes/footer') ?>

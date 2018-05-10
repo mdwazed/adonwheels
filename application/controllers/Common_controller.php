@@ -31,6 +31,9 @@ class Common_controller extends CI_Controller {
 
 	public function process_contact_message(){
 		echo "processing contact message";
+		echo $_POST['email'];
+		echo $_POST['message'];
+
 	}
 
 	public function download(){

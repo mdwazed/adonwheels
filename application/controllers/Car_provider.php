@@ -267,23 +267,31 @@ class Car_provider extends CI_Controller {
 
     public function delete_image(){
 
-        $this->load->model('car_provider_model');
-        $this->load->model('user_model');
-        $user_id = $this->user_model->get_logged_in_user_id();
+        if(!isset($_SESSION['user_email'])){
+//            redirect('/user_controller/registration','refresh');
+            $data['message'] = $this->lang->line('msg_login_first');
+            $this->load->view('gen_views/success_message', $data);
+        }else{
+            $this->load->model('car_provider_model');
+            $this->load->model('user_model');
+            $user_id = $this->user_model->get_logged_in_user_id();
 
-        if(isset($_POST['delete'])){
-            echo 'delete submitted';
+            if(isset($_POST['delete'])){
+                echo 'delete submitted';
 //            var_dump($_POST);
-            $retval = $this->car_provider_model->delete_car_image($user_id[0]['user_id'], $_POST['tobe_deleted']);
+                $retval = $this->car_provider_model->delete_car_image($user_id[0]['user_id'], $_POST['tobe_deleted']);
 
 
+            }
+
+
+            $car_images_name = $this->car_provider_model->get_car_images_name($user_id[0]['user_id']);
+
+            $data['image_names'] = $car_images_name;
+            $this->load->view('car_provider/delete_image',$data);
         }
 
 
-        $car_images_name = $this->car_provider_model->get_car_images_name($user_id[0]['user_id']);
-
-        $data['image_names'] = $car_images_name;
-        $this->load->view('car_provider/delete_image',$data);
 
     }
 
