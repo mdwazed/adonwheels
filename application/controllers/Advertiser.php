@@ -242,24 +242,32 @@ class Advertiser extends CI_Controller {
 		
 		$this->load->view('advertiser/car_details', $data);
 	}
+
+
 	//////////  act on info receive from car demand page /////////////
 	public function request_for_ad($car_id){
-		//echo 'request for ad'.$car_id;
-		$this->load->model('User_model');
-		$this->load->model('Common_model');
-		$this->load->model('Advertiser_model');
-		$advertiser = $this->User_model->get_logged_in_user_id();
-		$car = $this->Common_model->get_car_by_id($car_id);
+        if(!isset($this->session->user_email))
+        {
+            $data['message'] = $this->lang->line('msg_login_first');
+            $this->load->view('gen_views/success_message', $data);
 
-		$ret_val = $this->Advertiser_model->submit_ad_request($advertiser, $car);
-		if($ret_val){
-			$data['message'] = 'Your request has been successful. "Ad on wheels" will contact you soon.';
-			$this->load->view('gen_views/ad_request_success', $data);
+        }else{
+            $this->load->model('User_model');
+            $this->load->model('Common_model');
+            $this->load->model('Advertiser_model');
+            $advertiser = $this->User_model->get_logged_in_user_id();
+            $car = $this->Common_model->get_car_by_id($car_id);
 
-		}else{
-			$data['message'] = 'Your request could not be processed at this time. Please try later.';
-			$tihs->load->view('gen_views/ad_request_success', $data);
-		}
+            $ret_val = $this->Advertiser_model->submit_ad_request($advertiser, $car);
+            if($ret_val){
+                $data['message'] = 'Your request has been successful. "Ad on wheels" will contact you soon.';
+                $this->load->view('gen_views/ad_request_success', $data);
+
+            }else{
+                $data['message'] = 'Your request could not be processed at this time. Please try later.';
+                $this->load->view('gen_views/ad_request_success', $data);
+            }
+        }
 
 	}
 
@@ -287,8 +295,24 @@ class Advertiser extends CI_Controller {
 
 	public function car_demands(){
 
+	    if(isset($_POST['submit'])){
+	        $this->load->model('Advertiser_model');
+            $data['location'] = $_POST['car_location'];
+            $data['min_year'] = $_POST['car_make_year'];
+            $data['space_require'] = $_POST['space_require'];
+            $data['max_price'] = $_POST['max_price'];
+            if($this->Advertiser_model->save_demands($data)){
+                $data['message'] = "Your demand has been placed successfully.'Ad on wheels' will contact you as soon a suitable match is found";
+                $this->load->view('gen_views/success_message',$data);
+            }else{
+                $data['message'] = "We are sorry. Your demand could not be placed at the moment due to technical difficulties. please try later.";
+                $this->load->view('gen_views/success_message',$data);
+            }
 
-		$this->load->view('advertiser/car_demands');
+        }else{
+            $this->load->view('advertiser/car_demands');
+        }
+
 	}
 	
 

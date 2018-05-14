@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fb5d2bf-d8d3-4afb-97bd-dbf7537b290b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Common_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Common_controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/User_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User_controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Common_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Common_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do" beforeDir="false" afterPath="$PROJECT_DIR$/to_do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Advertiser.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Advertiser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Advertiser_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Advertiser_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/advertiser/car_demands.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/advertiser/car_demands.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,67 +15,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Common_controller.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Common_controller.php">
+    <leaf>
+      <file leaf-file-name="Advertiser.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="success_message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/gen_views/success_message.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Car_provider_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Car_provider_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="277" column="49" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="49" />
+            <state relative-caret-position="372">
+              <caret line="306" column="18" lean-forward="true" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
               <folding>
-                <element signature="n#__construct#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#update_car#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#save_car_image#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#get_sticker#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#show_car_provider_portfolio#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#update_sticker#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#delete_sticker#0;n#Car_provider_model#0;n#!!top" />
-                <element signature="n#add_sticker#0;n#Car_provider_model#0;n#!!top" />
+                <element signature="e#512#6680#0#PHP" />
+                <element signature="e#6785#7142#0#PHP" />
+                <element signature="e#7148#7391#0#PHP" />
+                <element signature="e#7534#7988#0#PHP" />
+                <element signature="e#8058#8792#0#PHP" />
+                <element signature="e#8789#9426#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Common_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Common_model.php">
+      <file leaf-file-name="Advertiser_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="215" column="24" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
-              <folding>
-                <element signature="e#266#1775#0#PHP" />
-                <element signature="e#1778#1912#0#PHP" />
-                <element signature="e#1915#2567#0#PHP" />
-                <element signature="e#2570#2766#0#PHP" />
-                <element signature="e#2772#3305#0#PHP" />
-                <element signature="e#3311#3671#0#PHP" />
-                <element signature="e#3677#4034#0#PHP" />
-                <element signature="e#4040#4521#0#PHP" />
-                <element signature="e#4603#4785#0#PHP" />
-                <element signature="e#4791#5056#0#PHP" />
-                <element signature="e#5150#7054#0#PHP" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about_us.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/gen_views/about_us.php">
+      <file leaf-file-name="car_demands.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/advertiser/car_demands.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="390">
+              <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -87,6 +58,7 @@
       <find>delete_ima</find>
       <find>mail</find>
       <find>send_mail</find>
+      <find>reques</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,6 +78,9 @@
         <option value="$PROJECT_DIR$/application/controllers/User_controller.php" />
         <option value="$PROJECT_DIR$/application/models/Common_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/Common_controller.php" />
+        <option value="$PROJECT_DIR$/application/views/advertiser/car_demands.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Advertiser.php" />
+        <option value="$PROJECT_DIR$/application/models/Advertiser_model.php" />
       </list>
     </option>
   </component>
@@ -119,17 +94,16 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1683" />
-    <option name="y" value="-4" />
-    <option name="width" value="1366" />
-    <option name="height" value="727" />
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1368" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,12 +139,20 @@
               <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="advertiser" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="adonwheels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gen_views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,16 +189,16 @@
       <workItem from="1524127229654" duration="442000" />
       <workItem from="1524151636425" duration="2441000" />
       <workItem from="1524158354522" duration="9570000" />
-      <workItem from="1525939410281" duration="9343000" />
+      <workItem from="1525939410281" duration="9832000" />
+      <workItem from="1525981930769" duration="4884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31672000" />
+    <option name="totallyTimeSpent" value="37045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="-4" width="1366" height="727" extended-state="6" />
-    <editor active="true" />
+    <frame x="1599" y="-11" width="1368" height="735" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21156661" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -251,27 +233,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/Car_provider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4125">
-          <caret line="275" column="34" selection-start-line="275" selection-start-column="34" selection-end-line="275" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Car_provider_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="268" column="41" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_car#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#save_car_image#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#get_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#show_car_provider_portfolio#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#delete_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#add_sticker#0;n#Car_provider_model#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -383,19 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-839">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#index#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#earning_possibilities#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#save_car#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#car_image_upload_loop#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car_image#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car_instr#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#show_car_provider_portfolio#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#edit_sticker#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#delete_image#0;n#Car_provider#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -403,16 +355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="277" column="49" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="49" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_car#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#save_car_image#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#get_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#show_car_provider_portfolio#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#delete_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#add_sticker#0;n#Car_provider_model#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -455,16 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="268" column="41" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_car#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#save_car_image#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#get_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#show_car_provider_portfolio#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#delete_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#add_sticker#0;n#Car_provider_model#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,36 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="269" column="16" lean-forward="true" selection-start-line="269" selection-start-column="16" selection-end-line="270" selection-end-column="70" />
-          <folding>
-            <element signature="e#512#6680#0#PHP" />
-            <element signature="e#6785#7142#0#PHP" />
-            <element signature="e#7148#7391#0#PHP" />
-            <element signature="e#7534#7988#0#PHP" />
-            <element signature="e#8058#8786#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Car_provider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="278" column="40" lean-forward="true" selection-start-line="278" selection-start-column="40" selection-end-line="278" selection-end-column="40" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#index#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#earning_possibilities#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#save_car#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#car_image_upload_loop#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car_image#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#add_car_instr#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#edit_car_provider_profile#0;n#Car_provider#0;n#!!top" />
-            <element signature="n#edit_sticker#0;n#Car_provider#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,10 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/gen_views/about_us.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Common_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="222">
+          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -630,16 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="277" column="49" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="49" />
-          <folding>
-            <element signature="n#__construct#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_car#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#save_car_image#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#get_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#show_car_provider_portfolio#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#update_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#delete_sticker#0;n#Car_provider_model#0;n#!!top" />
-            <element signature="n#add_sticker#0;n#Car_provider_model#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,29 +543,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="215" column="24" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
-          <folding>
-            <element signature="e#266#1775#0#PHP" />
-            <element signature="e#1778#1912#0#PHP" />
-            <element signature="e#1915#2567#0#PHP" />
-            <element signature="e#2570#2766#0#PHP" />
-            <element signature="e#2772#3305#0#PHP" />
-            <element signature="e#3311#3671#0#PHP" />
-            <element signature="e#3677#4034#0#PHP" />
-            <element signature="e#4040#4521#0#PHP" />
-            <element signature="e#4603#4785#0#PHP" />
-            <element signature="e#4791#5056#0#PHP" />
-            <element signature="e#5150#7054#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/gen_views/success_message.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Common_controller.php">
+    <entry file="file://$PROJECT_DIR$/application/views/gen_views/about_us.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+        <state relative-caret-position="-15">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/advertiser/car_demands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="306" column="18" lean-forward="true" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
+          <folding>
+            <element signature="e#512#6680#0#PHP" />
+            <element signature="e#6785#7142#0#PHP" />
+            <element signature="e#7148#7391#0#PHP" />
+            <element signature="e#7534#7988#0#PHP" />
+            <element signature="e#8058#8792#0#PHP" />
+            <element signature="e#8789#9426#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

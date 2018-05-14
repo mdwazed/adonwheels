@@ -17,7 +17,7 @@ $this->view('includes/header');
                 <p><?php echo $this->lang->line('car_demand_description'); ?></p>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="<?php echo base_url(); ?>" method="POST">
+                    <form class="form-horizontal" action="<?php echo base_url('/index.php/advertiser/car_demands'); ?>" method="POST">
 
                        
 
@@ -37,9 +37,9 @@ $this->view('includes/header');
                       </div>
 
                       <div class="form-group">
-                        <label for="space_door" class="col-md-2 control-label"><?php echo $this->lang->line('space_require'); ?></label>
+                        <label for="space_require" class="col-md-2 control-label"><?php echo $this->lang->line('space_require'); ?></label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" id="space_door" name="space_door" placeholder="e.g. 900" required="yes">
+                          <input type="text" class="form-control" id="space_require" name="space_require" placeholder="e.g. 900" required="yes">
                         </div>
                         cm²
                       </div>
@@ -47,9 +47,9 @@ $this->view('includes/header');
                      
 
                       <div class="form-group">
-                        <label for="min_price" class="col-md-2 control-label"><?php echo $this->lang->line('max_price'); ?></label>
+                        <label for="max_price" class="col-md-2 control-label"><?php echo $this->lang->line('max_price'); ?></label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" id="min_price" name="min_price" placeholder="e.g. 70" required="yes">
+                          <input type="text" class="form-control" id="max_price" name="max_price" placeholder="e.g. 70" required="yes">
                         </div>
                         €/100cm²/month
                       </div>
@@ -57,7 +57,7 @@ $this->view('includes/header');
                       
                       <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-primary"><?php echo $this->lang->line('submit'); ?></button>
+                          <button type="submit" name="submit" class="btn btn-primary"><?php echo $this->lang->line('submit'); ?></button>
                         </div>
                       </div>
                     </form>
