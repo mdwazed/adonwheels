@@ -4,4 +4,5 @@
       <a href="#" class="list-group-item">Soon ending contracts</a>
       <a href="#" class="list-group-item">Send email to clients</a>
       <a href="#" class="list-group-item">Received car demands</a>
+      <a href="#" class="list-group-item">Clients messages</a>
 </div>

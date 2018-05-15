@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6fb5d2bf-d8d3-4afb-97bd-dbf7537b290b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Advertiser.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Advertiser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Advertiser_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Advertiser_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/advertiser/car_demands.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/advertiser/car_demands.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/includes/admin_left_nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/includes/admin_left_nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/includes/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,37 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Advertiser.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
+      <file leaf-file-name="admin_left_nav.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/includes/admin_left_nav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="306" column="18" lean-forward="true" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
-              <folding>
-                <element signature="e#512#6680#0#PHP" />
-                <element signature="e#6785#7142#0#PHP" />
-                <element signature="e#7148#7391#0#PHP" />
-                <element signature="e#7534#7988#0#PHP" />
-                <element signature="e#8058#8792#0#PHP" />
-                <element signature="e#8789#9426#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Advertiser_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="car_demands.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/advertiser/car_demands.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+            <state relative-caret-position="90">
+              <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -81,6 +54,8 @@
         <option value="$PROJECT_DIR$/application/views/advertiser/car_demands.php" />
         <option value="$PROJECT_DIR$/application/controllers/Advertiser.php" />
         <option value="$PROJECT_DIR$/application/models/Advertiser_model.php" />
+        <option value="$PROJECT_DIR$/application/views/includes/header.php" />
+        <option value="$PROJECT_DIR$/application/views/includes/admin_left_nav.php" />
       </list>
     </option>
   </component>
@@ -94,10 +69,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="y" value="-11" />
-    <option name="width" value="1368" />
-    <option name="height" value="735" />
+    <option name="x" value="1600" />
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -126,12 +101,6 @@
               <item name="adonwheels" type="b2602c69:ProjectViewProjectNode" />
               <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="adonwheels" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -139,14 +108,14 @@
               <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="advertiser" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="adonwheels" type="b2602c69:ProjectViewProjectNode" />
               <item name="adonwheels" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gen_views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -191,14 +160,20 @@
       <workItem from="1524158354522" duration="9570000" />
       <workItem from="1525939410281" duration="9832000" />
       <workItem from="1525981930769" duration="4884000" />
+      <workItem from="1526293010153" duration="780000" />
+      <workItem from="1526365571198" duration="701000" />
+      <workItem from="1526368514085" duration="55000" />
+      <workItem from="1526370805233" duration="635000" />
+      <workItem from="1526425124813" duration="321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37045000" />
+    <option name="totallyTimeSpent" value="39537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="-11" width="1368" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21156661" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -233,45 +208,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/Car_provider_model.php">
+    <entry file="file://$PROJECT_DIR$/google_analytics">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="268" column="41" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="95" column="12" lean-forward="true" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/car_provider/delete_image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Car_provider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4110">
-          <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Car_provider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4095">
-          <caret line="273" column="33" selection-start-line="273" selection-start-column="33" selection-end-line="273" selection-end-column="33" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -463,11 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/root_nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/gen_views/earn_by_car.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -492,16 +427,6 @@
         <state relative-caret-position="360">
           <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="41" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/car_provider/delete_image.php">
@@ -553,10 +478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/advertiser/car_demands.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+        <state relative-caret-position="2970">
+          <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
         </state>
       </provider>
     </entry>
@@ -567,18 +492,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser.php">
+    <entry file="file://$PROJECT_DIR$/application/views/advertiser/car_demands.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="306" column="18" lean-forward="true" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
-          <folding>
-            <element signature="e#512#6680#0#PHP" />
-            <element signature="e#6785#7142#0#PHP" />
-            <element signature="e#7148#7391#0#PHP" />
-            <element signature="e#7534#7988#0#PHP" />
-            <element signature="e#8058#8792#0#PHP" />
-            <element signature="e#8789#9426#0#PHP" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google_analytics">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/admin_left_nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
         </state>
       </provider>
     </entry>
