@@ -105,6 +105,10 @@ class Admin_controller extends CI_Controller {
 		$this->load->view('gen_views/css_test');
 	}
 
+	public function show_clients_messages(){
+	    plrint('show clients messages');
+    }
+
 }
 
 /* End of file Admin_controller.php */

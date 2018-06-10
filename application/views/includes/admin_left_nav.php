@@ -4,5 +4,5 @@
       <a href="#" class="list-group-item">Soon ending contracts</a>
       <a href="#" class="list-group-item">Send email to clients</a>
       <a href="#" class="list-group-item">Received car demands</a>
-      <a href="#" class="list-group-item">Clients messages</a>
+      <a href=<?php echo base_url('index.php/Admin_controller/show_clients_messages'); ?> class="list-group-item">Clients messages</a>
 </div>

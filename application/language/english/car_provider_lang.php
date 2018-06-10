@@ -1,7 +1,7 @@
 <?php
 $lang["test_lang"] = "test lang eng";
 $lang["submit"] = "Submit";
-$lang["edit_sticker"] = "Edit sticker";
+$lang["edit_sticker"] = "Edit Banner";
 
 
 ////////////////  add a car page /////////////////////////
@@ -23,8 +23,8 @@ $lang["day_run"] = "Daily run";
 $lang["wk_run"] = "Weekly run";
 $lang["garrage"] = "Garrage";
 $lang["road_side"] = "Road side";
-$lang["sticker_related_info"] = "Sticker related information";
-$lang["no_of_sticker"] = "No of Sticker";
+$lang["sticker_related_info"] = "Banner related information";
+$lang["no_of_sticker"] = "No of Banner";
 $lang["place"] = "Place";
 $lang["front"] = "Front";
 $lang["side"] = "Side";

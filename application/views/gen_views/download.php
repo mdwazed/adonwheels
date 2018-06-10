@@ -18,6 +18,8 @@ $this->view('includes/header');
     <div class="container">
 <!--        page content goes here    -->
         <h1>Downloadable content</h1>
+        <h4><a href="<?php echo base_url('resources/VertragAutobesitzer.pdf')?>" target="_blank">VertragAutobesitzer</a></h4>
+        <h4><a href="<?php echo base_url('resources/VertragWerbepartner.pdf')?>" target="_blank">VertragWerbepartner</a></h4>
     </div>
     <hr>
 

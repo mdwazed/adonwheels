@@ -1,7 +1,7 @@
 <?php
 $lang["test_lang"] = "test lang deutsche";
 $lang["submit"] = "Absenden";
-$lang["edit_sticker"] = "Aufkleber bearbeiten";
+$lang["edit_sticker"] = "Banner bearbeiten";
 
 ////////////////  add a car page /////////////////////////
 $lang["basic_car_info"] = "Basis Information über Ihr Auto";
@@ -22,8 +22,8 @@ $lang["day_run"] = "Tägliche Laufleistung";
 $lang["wk_run"] = "Wöchentliche Laufleistung";
 $lang["garrage"] = "Garage";
 $lang["road_side"] = "Straßenrand";
-$lang["sticker_related_info"] = "Aufkleber bezogene Informationen";
-$lang["no_of_sticker"] = "Anzahl der Aufkleber";
+$lang["sticker_related_info"] = "Banner bezogene Informationen";
+$lang["no_of_sticker"] = "Anzahl der Banner";
 $lang["place"] = "Ort";
 $lang["front"] = "Vorderseite";
 $lang["side"] = "Seite";

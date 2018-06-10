@@ -3,6 +3,8 @@
 ////////////// words for registration and login page //////////////////
 $lang["user_registration"] = "User Registration";
 $lang["user_login"] = "User Login";
+$lang["user_type"] = "User Type";
+$lang["company"] = "Company";
 $lang["last_name"] = "Last Name";
 $lang["first_name"] = "First Name";
 $lang["email"] = "Email";
@@ -12,7 +14,6 @@ $lang["city"] = "City";
 $lang["zip_code"] = "Zip Code";
 $lang["country"] = "Country";
 $lang["telephone"] = "Telephone";
-$lang["user_type"] = "User Type";
 $lang["car_provider"] = "Car Provider";
 $lang["advertiser"] = "Advertiser";
 $lang["submit"] = "Submit";

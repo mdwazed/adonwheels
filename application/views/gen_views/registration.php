@@ -17,6 +17,23 @@ $this->view('includes/header');
 
            <form class="form-horizontal" action="<?php echo base_url(); ?>index.php/User_controller/save_user" method ="POST">
 
+               <div class="form-group">
+                   <label for="user_type" class="col-md-2 control-label"><?php echo $this->lang->line('user_type'); ?></label>
+                   <div class="col-md-6">
+                       <select class="form-control" id="user_type" name="user_type" title="If you are a potential clients who would like to let us put banner on your car then select 'car provider'. If you are interested for advertisement on our car pool please select 'advertiser'">
+                           <option value="1"><?php echo $this->lang->line('car_provider'); ?></option>
+                           <option value="2"><?php echo $this->lang->line('advertiser'); ?></option>
+                       </select>
+                   </div>
+               </div>
+
+               <div class="form-group">
+                   <label for="company" class="col-md-2 control-label"><?php echo $this->lang->line('company'); ?></label>
+                   <div class="col-md-6">
+                       <input type="text" class="form-control" id="company" name="company" title="Only fill up if you belongs to a company. private user please keep it blank">
+                   </div>
+               </div>
+
               <div class="form-group">
                 <label for="last_name" class="col-md-2 control-label"><?php echo $this->lang->line('last_name'); ?></label>
                 <div class="col-md-6">
@@ -80,17 +97,8 @@ $this->view('includes/header');
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="user_type" class="col-md-2 control-label"><?php echo $this->lang->line('user_type'); ?></label>
-                <div class="col-md-6">
-                  <select class="form-control" id="user_type" name="user_type">
-                    <option value="1"><?php echo $this->lang->line('car_provider'); ?></option>
-                    <option value="2"><?php echo $this->lang->line('advertiser'); ?></option>
-                                       
-                  </select>
-                  
-                </div>
-              </div>
+
+
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                   <button type="submit" class="btn btn-default"><?php echo $this->lang->line('submit'); ?></button>
