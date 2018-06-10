@@ -51,6 +51,8 @@ class User_controller extends CI_Controller {
 
 				/////////////////////////////
 			}else{
+			    /////////// add code to remove the added user in db
+                $this->User_model->remove_user($email);
 				$data['message'] = $this->lang->line('user_creation_failed');
 			}
 			

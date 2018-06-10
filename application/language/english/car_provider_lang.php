@@ -48,6 +48,7 @@ $lang["user_info"] = "User Information";
 $lang["portfolio_of"] = "Portfolio of ";
 $lang["last_name"] = "Last Name: ";
 $lang["first_name"] = "First Name: ";
+$lang["company"] = "Company";
 $lang["email"] = "Email: ";
 $lang["address"] = "Address: ";
 $lang["city"] = "City: ";

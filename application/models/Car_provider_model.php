@@ -170,6 +170,7 @@
             $result = $this->user_model->get_user($_SESSION['user_email']);
             $data['user_name'] = $result[0]['last_name'].' '. $result[0]['first_name'];
             $data['last_name'] = $result[0]['last_name'];
+            $data['company'] = $result[0]['company'];
             $data['first_name'] = $result[0]['first_name'];
             $data['user_email'] = $result[0]['user_email'];
             $data['user_address'] = $result[0]['user_address'];
@@ -185,18 +186,14 @@
 
             //////////////////////// get car information ////////////////////////////
             $user_id = $result[0]['user_id'];
-            //$query = $this->db->get_where('cars',array('owner_id'=>$result[0]['user_id']),1);
-            //$result_car = $query->result_array();
+
             $result_car = $this->get_car($user_id);
 
             ////// get sticker info //////////////
             $result_sticker = $this->get_sticker($user_id);
 
-
-
-
-
             if(count($result_car)>0){
+                $data['car_found'] = true;
                 $data['car_model'] = $result_car[0]['car_model'];
                 $data['car_make'] = $result_car[0]['car_make'];
                 $data['car_make_year'] = $result_car[0]['car_make_year'];

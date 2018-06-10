@@ -47,6 +47,7 @@ $lang["portfolio_of"] = "Portfolio von";
 $lang["user_info"] = "Benutzer Information";
 $lang["last_name"] = "Familienname ";
 $lang["first_name"] = "Vorname ";
+$lang["company"] = "Firmenname";
 $lang["email"] = "Email: ";
 $lang["address"] = "Addresse: ";
 $lang["city"] = "Stadt: ";

@@ -25,6 +25,10 @@ $this->view('includes/header');
                     <dd><?php echo $first_name; ?></dd>
                 </dl>
                 <dl class="dl-horizontal">
+                    <dt><?php echo $this->lang->line('company'); ?></dt>
+                    <dd><?php echo $company; ?></dd>
+                </dl>
+                <dl class="dl-horizontal">
                     <dt><?php echo $this->lang->line('email'); ?></dt>
                     <dd><?php echo $user_email; ?></dd>
                 </dl>
@@ -71,9 +75,15 @@ $this->view('includes/header');
                 </dl>
                
             </div>
-            <h3><?php echo $this->lang->line('car_info'); ?></h3> 
-
+            <h3><?php echo $this->lang->line('car_info'); ?></h3>
             <div>
+
+
+            <?php
+            if(isset($car_found)){
+            ?>
+
+
                 <dl class="dl-horizontal">
                     <dt><?php echo $this->lang->line('car_model'); ?></dt>
                     <dd><?php echo isset($car_model)? $car_model:''; ?></dd>
@@ -115,13 +125,30 @@ $this->view('includes/header');
                     <dt><?php echo $this->lang->line('week_run'); ?></dt>
                     <dd><?php echo isset($week_run)? $week_run:'00'.' km'; ?></dd>
                 </dl>
-                <div>
-                    <h3><?php echo $this->lang->line('sticker_related_info'); ?></h3>
 
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr><th><?php echo $this->lang->line('no_of_sticker'); ?></th><th><?php echo $this->lang->line('place'); ?></th><th><?php echo $this->lang->line('height'); ?><br>cm</th><th><?php echo $this->lang->line('width'); ?><br>cm</th><th><?php echo $this->lang->line('unit_price'); ?><br>per 100 cm<sup>2</sup></th></tr>
-                            <?php
+            <?php
+
+            }else{
+                echo '<h4>No car found</h4>';
+            }
+            ?>
+
+
+
+                <?php
+                    if(isset($sticker_info)) {
+                ?>
+                        <div>
+                            <h3><?php echo $this->lang->line('sticker_related_info'); ?></h3>
+
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr><th><?php echo $this->lang->line('no_of_sticker'); ?></th><th><?php echo $this->lang->line('place'); ?></th><th><?php echo $this->lang->line('height'); ?><br>cm</th><th><?php echo $this->lang->line('width'); ?><br>cm</th><th><?php echo $this->lang->line('unit_price'); ?><br>per 100 cm<sup>2</sup></th></tr>
+                                <?php
+
+
+
+
                                 $row_price = array();
 
                                 foreach ($sticker_info as $sticker){
@@ -135,22 +162,34 @@ $this->view('includes/header');
                                     $price = $sticker['no_of_sticker'] * (($sticker['height_of_sticker'] * $sticker['width_of_sticker'])/100) * $sticker['unit_price_of_sticker'];
                                     array_push($row_price, $price);
                                 }
-                            ?>
-                        </tbody>
-                    </table>
-                    <div>
-                        <?php
-                            $total_price = 0;
-                            foreach ($row_price as $row_price){
-                                $total_price += $row_price;
-                            }
-                            echo '<h4>'.$this->lang->line('total_price').': '.$total_price.' Euro/month</h4>';
-                        ?>
-                    </div>
 
-                </div>
+                                ?>
+                                </tbody>
+                            </table>
+
+
+                            <div>
+                                <?php
+                                $total_price = 0;
+                                foreach ($row_price as $row_price){
+                                    $total_price += $row_price;
+                                }
+                                echo '<h4>'.$this->lang->line('total_price').': '.$total_price.' Euro/month</h4>';
+                                ?>
+                            </div>
+
+                        </div>
+                <?php
+                    }
+                ?>
+
+
+
+
 
             </div>
+
+
             <div>
                  <a class="btn btn-lg btn-primary" href="<?php echo base_url('index.php/car_provider/edit_car_provider_profile'); ?>"><?php echo $this->lang->line('edit'); ?></a>
             </div>

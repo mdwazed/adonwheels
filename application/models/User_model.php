@@ -10,6 +10,7 @@
         ///// save user info to db from registration  page
         public function save_user(){
             $data = array();
+            $data['company'] = $this->input->post('company');
             $data['last_name'] = $this->input->post('last_name');
             $data['first_name'] = $this->input->post('first_name');
             $data['user_email'] = $this->input->post('email');
@@ -33,6 +34,10 @@
             }else{
                 return $this->db->insert('users',$data)  ;                  
             }            
+        }
+
+        public  function remove_user($email){
+            $this->db->delete('users', array('user_email' => $email));
         }
 
         public function user_login(){
