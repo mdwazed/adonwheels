@@ -10,7 +10,6 @@
         ///// save user info to db from registration  page
         public function save_user(){
             $data = array();
-            $data['company'] = $this->input->post('company');
             $data['last_name'] = $this->input->post('last_name');
             $data['first_name'] = $this->input->post('first_name');
             $data['user_email'] = $this->input->post('email');
@@ -36,8 +35,23 @@
             }            
         }
 
-        public  function remove_user($email){
-            $this->db->delete('users', array('user_email' => $email));
+        public function user_fb_login($email){
+            $return_value = 0;
+            $this->db->select('user_email');
+            $query = $this->db->get_where('users', array('user_email'=> $email,'email_verified'=>1));
+            $result = $query->result_array();         
+            $num_of_rows = $query->num_rows();
+            if($num_of_rows == 1){                
+                $_SESSION['user_email'] = $email; //////// set usr email as session var
+                $_SESSION['user_type'] = $this->get_user_type($email); //////// set user type as session var
+                $_SESSION['user_logged_in'] = 1;
+                $_SESSION['user_fb_logged_in'] = True;
+                $return_value = 1;                
+            }else{
+                $return_value = 0;
+            }
+
+            return $return_value;
         }
 
         public function user_login(){
@@ -56,7 +70,7 @@
             if($num_of_rows == 1){
                 if($password == $result[0]['password']){
                     $_SESSION['user_email'] = $email; //////// set usr email as session var
-                    $_SESSION['user_type'] = $this->get_user_type($email); //////// set usr email as session var
+                    $_SESSION['user_type'] = $this->get_user_type($email); //////// set user type as session var
                     $_SESSION['user_logged_in'] = 1;
                     $return_value = 1;
                 }else{
@@ -101,10 +115,7 @@
             $this->db->select('user_id');
             $query = $this->db->get_where('users', array('user_email'=> $_SESSION['user_email']));
             $result = $query->result_array();
-            if(sizeof($result)==1){
-                return $result;
-            }
-//
+            return $result;
         }
 
         public function update_user($user_id)

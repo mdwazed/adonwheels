@@ -1,5 +1,7 @@
 <?php 
-$this->view('includes/header'); 
+$this->view('includes/header');
+
+
 ?>
 <body>
     
@@ -112,16 +114,22 @@ $this->view('includes/header');
         <div class="col-md-4"> 
           <div class="page-header">
             <h1><?php echo $this->lang->line('user_login'); ?></h1>
-          </div> 
+          </div>
+            <div>
+                <input type="image" name="fb_login" id="fb_login" alt="Continue with FB" onclick="fbLogin()" class="fb_login" 
+                src="<?php echo base_url('images/fb_login.png') ?>"/> 
+                <br><strong>OR</strong>
+            </div>
+           
           <div>
               <form action="<?php echo base_url(); ?>index.php/User_controller/login" method ="POST">
                 <div class="form-group">
                   <label for="exampleInputEmail1"><?php echo $this->lang->line('email'); ?></label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                  <input type="email" class="form-control" id="email1" name="email" placeholder="Email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1"><?php echo $this->lang->line('password'); ?></label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  <input type="password" class="form-control" id="password1" name="password" placeholder="Password">
                 </div>
                 
                 <button type="submit" class="btn btn-default"><?php echo $this->lang->line('submit'); ?></button>
@@ -130,8 +138,101 @@ $this->view('includes/header');
           <a href="<?php echo base_url('index.php/user_controller/reset_password'); ?>"><?php echo $this->lang->line('forgot_password'); ?></a>
         </div>
     </div>
-    <hr>    
+    <hr>
 
-      
+
+    <script>
+    
+		/////// fb log in script /////////
+    	function fbLogOut(){
+    		FB.logout(function(){
+    			console.log('user logged out');
+    		});
+    	};
+
+    	// Post to the provided URL with the specified parameters.
+	    function post(path, parameters) {
+	        var form = $('<form></form>');
+
+	        form.attr("method", "post");
+	        form.attr("action", path);
+
+	        $.each(parameters, function(key, value) {
+	            if ( typeof value == 'object' || typeof value == 'array' ){
+	                $.each(value, function(subkey, subvalue) {
+	                    var field = $('<input />');
+	                    field.attr("type", "hidden");
+	                    field.attr("name", key+'[]');
+	                    field.attr("value", subvalue);
+	                    form.append(field);
+	                });
+	            } else {
+	                var field = $('<input />');
+	                field.attr("type", "hidden");
+	                field.attr("name", key);
+	                field.attr("value", value);
+	                form.append(field);
+	            }
+	        });
+	        $(document.body).append(form);
+	        form.submit();
+	    };
+
+        function fbLogin(){
+        	// console.log('getting log in status');
+            FB.getLoginStatus(function(response) {
+                console.log(response.status);
+                if(response.status != 'connected'){
+                	FB.login(function(response) {
+					    if (response.authResponse) {
+					     console.log('Welcome!  Fetching your information.... ');
+					     FB.api('/me?fields=id,name,email', function(userData) {
+					       // console.log(userData);
+					       var purl = "<?php echo base_url(); ?>index.php/User_controller/fbLogIn";
+	                		var parameters = {name:userData.name, email:userData.email};
+	                		// console.log(parameters);
+	                		post(purl, parameters);
+					     });
+					    } else {
+					     console.log('User cancelled login or did not fully authorize.');
+					    }
+					}, {scope: 'public_profile,email'});
+                }else{
+                	// console.log(response);
+                	FB.api('/me?fields=id,name,email',function (userData){
+                		console.log(userData);
+                		var purl = "<?php echo base_url(); ?>index.php/User_controller/fbLogIn";
+                		var parameters = {name:userData.name, email:userData.email, accessToken: userData.accessToken};
+                		// console.log(parameters);
+                		post(purl, parameters);
+
+                	});
+                }
+       			
+            });
+        };
+
+
+         window.fbAsyncInit = function() {
+		    FB.init({
+		      appId            : '884578681735299',
+		      autoLogAppEvents : true,
+		      xfbml            : true,
+		      version          : 'v3.0'
+		    });
+		    FB.AppEvents.logPageView();
+
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "https://connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 
 <?php $this->view('includes/footer') ?>

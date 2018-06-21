@@ -13,6 +13,7 @@
 
         gtag('config', 'UA-119232212-1');
     </script>
+    <!-- end of google analytic -->
 
 
     <meta charset="utf-8">

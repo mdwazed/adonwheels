@@ -28,8 +28,6 @@ class User_controller extends CI_Controller {
 		//var_dump($_POST);
 		$this->load->helper('string');
 		$this->load->model('User_model');
-		$this->load->model('Common_model');
-
 		$ret_val = $this->User_model->save_user();
 		if($ret_val != 1){
 			$data['message'] = $this->lang->line('user_creation_failed');
@@ -41,7 +39,7 @@ class User_controller extends CI_Controller {
 			$email_data['subject'] = $this->lang->line('email_verification_mail_subj');
 			$email_data['message'] = $this->lang->line('email_verification_mail_body_part1').base_url("index.php/User_controller/activate_account/".$activation_link).$this->lang->line('email_verification_mail_body_part2');
 
-			if($this->Common_model->send_mail($email_data)){
+			if($this->send_mail($email_data)){
 				$data['message'] = $this->lang->line('user_creation_success');
 				////////////////////////////
 				/*
@@ -51,14 +49,30 @@ class User_controller extends CI_Controller {
 
 				/////////////////////////////
 			}else{
-			    /////////// add code to remove the added user in db
-                $this->User_model->remove_user($email);
 				$data['message'] = $this->lang->line('user_creation_failed');
 			}
 			
 		}
 		
 		$this->load->view('gen_views/success_message', $data);		
+	}
+
+	public function fbLogIn(){
+		
+		$this->load->model('User_model');
+		if($this->User_model->user_fb_login($_POST['email'])){
+			if($_SESSION['user_type'] == 3){
+				$data['message'] = $this->lang->line('login_successful').'</br><h3>'.anchor('admin_controller/show_dashboard',' Admin Dashboard ').'</h3><h4>'.anchor('User_controller/change_password',' Change password ').'</h4>';
+			}elseif($_SESSION['user_type'] == 2){
+				$data['message'] = $this->lang->line('login_successful').'</br>'. anchor('home',' Home ').'<br>'.anchor('advertiser/show_logged_in_advertiser_profile',' Profile ').'<h4>'.anchor('User_controller/change_password',' Change password ').'</h4>';
+			}else{
+				$data['message'] = $this->lang->line('login_successful').'</br>'. anchor('home',' Home ').'<br>'.anchor('car_provider/show_car_provider_portfolio',' Profile ').'<h4>'.anchor('User_controller/change_password',' change password ').'</h4>';
+			}
+			
+		}else{
+			$data['message'] = $this->lang->line('login_failed');
+		}
+		$this->load->view('gen_views/success_message', $data);
 	}
 
 	public function login(){
@@ -100,7 +114,6 @@ class User_controller extends CI_Controller {
 		}else{
 			$email = $this->input->post('email');
 			$this->load->model('User_model');
-			$this->load->model('Common_model');
 			$ret_val = $this->User_model->get_user($email);
 			//var_dump($ret_val);
 			if(count($ret_val)==1){
@@ -114,7 +127,7 @@ class User_controller extends CI_Controller {
 
 				
 				if($this->User_model->update_password($email,md5($random_password))){
-					if($this->Common_model->send_mail($data)){
+					if($this->send_mail($data)){
 						$data['message'] = $this->lang->line('msg_passwd_reset_mail_sent');
 						$this->load->view('gen_views/success_message', $data);
 					}
@@ -159,7 +172,68 @@ class User_controller extends CI_Controller {
 		}
 	}
 
+	public function send_mail($data){
+		//echo 'sending  mail<br>';
 
+		$this->load->library('email');
+
+		$config = Array(
+		    'protocol' => 'smtp',
+		    'smtp_host' => 'ssl://adonwheels.net',
+		    'smtp_port' => 465,
+		    'smtp_user' => 'test@adonwheels.net',
+		    'smtp_pass' => '1qaz2wsx3edc',
+		    'smtp_timeout' => 10,
+		    'mailtype'  => 'html', 
+		    'charset'   => 'utf-8'
+		);
+
+		// $config = Array(
+		//     'protocol' => 'smtp',
+		//     'smtp_host' => 'ssl://smtp.googlemail.com',
+		//     'smtp_port' => 465,
+		//     'smtp_user' => 'wazed6077@gmail.com',
+		//     'smtp_pass' => '01769114444',
+		//     'smtp_timeout' => 10,
+		//     'mailtype'  => 'html', 
+		//     'charset'   => 'utf-8'
+		// );
+
+		/*$config = Array(
+		    'protocol' => 'smtp',
+		    'smtp_host' => 'ssl://mail.technovabd.com',
+		    'smtp_port' => 465,
+		    'smtp_user' => 'admin@technovabd.com',
+		    'smtp_pass' => '1qaz2wsx3edc',
+		    'mailtype'  => 'html', 
+		    'charset'   => 'utf-8'
+		);*/
+
+		$this->email->initialize($config);
+		$this->email->set_mailtype("html");
+		$this->email->set_newline("\r\n");
+
+
+		/*//Email content
+		$htmlContent = '<h1>Your passowrd has been reset at Ad on Wheels</h1>';
+		$htmlContent .= '<p>'.$data['message'].'</p>';
+		$htmlContent .= '<h3>'.$data['password'].'</h3>';*/
+
+
+		$this->email->to($data['mail_to']);
+		$this->email->from('test@adonwheels.net','Ad On Wheels');
+		$this->email->subject($data['subject']);
+		$this->email->message($data['message']);
+		//var_dump($data);
+
+		if($this->email->send()){
+			//echo 'email sent';
+			return TRUE;
+		}else{
+			echo $this->email->print_debugger();
+		}	
+
+	}
 
 	public function activate_account(){
 		$email = $this->uri->segment(3);

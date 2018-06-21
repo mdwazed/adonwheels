@@ -35,5 +35,8 @@ dd {
   .dl-custom dd {
     margin-left: 0px;
   }
+  input#fb_login {
+    height: 30px;
+  }
 }
 
