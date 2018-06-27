@@ -5,12 +5,12 @@ app secret: 867fbfae31ba29fda41cf8c83fc776f2
 
 
 ------------------
-
+ fb login branch to be merged with master branch 
 
 closing tag of div container in footer section. so avoid putting double tag i.e. one in body 
 
-add downloadable content
-Delete image fucntionality
+
+
 action after requesting for ad
 redirect to log in page after session expire
 request for add page shows error if not logged in. show message for log in
