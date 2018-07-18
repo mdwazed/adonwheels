@@ -50,9 +50,9 @@
             $data['car_location'] = $car_location;
             $data['car_color'] =  $this->input->post('car_color');           
             $data['reg_number'] = $this->input->post('reg_no');
-            $data['space_door'] = $this->input->post('space_door');
-            $data['space_rear'] = $this->input->post('space_rear');
-            $data['min_price'] = $this->input->post('min_price');
+
+
+
             $data['parking_day'] = $this->input->post('parking_day');
             $data['parking_night'] = $this->input->post('parking_night');
             $data['day_run'] = $this->input->post('day_run');
@@ -84,9 +84,7 @@
             $data['car_make_year'] = $this->input->post('car_make_year');
             $data['car_color'] = $this->input->post('car_color');
             $data['reg_number'] = $this->input->post('reg_no');
-            $data['space_door'] = $this->input->post('space_door');
-            $data['space_rear'] = $this->input->post('space_rear');
-            $data['min_price'] = $this->input->post('min_price');
+            $data['car_location'] = $this->input->post('car_location');
             $data['parking_day'] = $this->input->post('parking_day');
             $data['parking_night'] = $this->input->post('parking_night');
             $data['day_run'] = $this->input->post('day_run');
@@ -200,9 +198,7 @@
                 $data['car_color'] = $result_car[0]['car_color'];
                 $data['car_location'] = $result_car[0]['car_location'];
                 $data['reg_number'] = $result_car[0]['reg_number'];
-                $data['space_door'] = $result_car[0]['space_door'];
-                $data['space_rear'] = $result_car[0]['space_rear'];
-                $data['min_price'] = $result_car[0]['min_price'];
+
                 $data['parking_day'] = $result_car[0]['parking_day'];
                 $data['parking_night'] = $result_car[0]['parking_night'];
                 $data['day_run'] = $result_car[0]['day_run'];

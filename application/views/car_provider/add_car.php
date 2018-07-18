@@ -127,11 +127,12 @@ $this->view('includes/header');
 
                                        </select>
                                    </td>
-                                   <td>
-                                       <input type="text" class="form-control" id="2" name="sticker_height[]" placeholder="" value="">
-                                   </td>
+
                                    <td>
                                        <input type="text" class="form-control" id="3" name="sticker_width[]" placeholder="" value="">
+                                   </td>
+                                   <td>
+                                       <input type="text" class="form-control" id="2" name="sticker_height[]" placeholder="" value="">
                                    </td>
                                    <td>
                                        <input type="text" class="form-control" id="4" name="sticker_price[]" placeholder="" value="3">
@@ -259,8 +260,7 @@ $this->view('includes/header');
 
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8oohj-8021FeSfo7Oo9uNcM1w7fmLzWA&libraries=places&callback=activateAutoComplete">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8oohj-8021FeSfo7Oo9uNcM1w7fmLzWA&libraries=places&callback=activateAutoComplete"></script>
 
 
 <?php $this->view('includes/footer') ?>

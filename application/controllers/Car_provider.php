@@ -36,8 +36,8 @@ class Car_provider extends CI_Controller {
 		$data['post']['car_location']='';
 		$data['post']['car_color']='';
 		$data['post']['reg_no']='';
-		$data['post']['space_door']='';
-		$data['post']['space_rear']='';
+
+
 		$data['post']['min_price']='';
 		$data['post']['parking_day']='';
 		$data['post']['parking_night']='';
@@ -55,13 +55,9 @@ class Car_provider extends CI_Controller {
 
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('car_make_year', 'Car make year', 'trim|required|numeric|greater_than_equal_to[1995]');
-		$this->form_validation->set_rules('space_door', 'Space available on door', 'trim|required|numeric|greater_than_equal_to[0]');
-		$this->form_validation->set_rules('space_rear', 'Space available at rear', 'trim|required|numeric|greater_than_equal_to[0]');
-		$this->form_validation->set_rules('min_price', 'Minimum price', 'trim|required|greater_than[0]|less_than_equal_to[50]');
 		$this->form_validation->set_rules('day_run', 'Daily run', 'trim|required|numeric|greater_than_equal_to[0]');
 		$this->form_validation->set_rules('week_run', 'Weekly run', 'trim|required|numeric|greater_than_equal_to[0]');
-//        $this->form_validation->set_rules('no_of_sticker', 'num of sticker', 'trim|required|numeric|greater_than_equal_to[0]');
-		
+
 
 		if($this->form_validation->run()==FALSE)
 		{
@@ -171,29 +167,27 @@ class Car_provider extends CI_Controller {
 			$this->load->model('car_provider_model');
 			$car_data = $this->car_provider_model->get_car($ret_val[0]['user_id']);
 			if(count($car_data)>0){
+			    $data['has_car'] = True;
 				$data['car_id'] = $car_data[0]['id'];
 				$data['car_model'] = $car_data[0]['car_model'];
 				$data['car_make'] = $car_data[0]['car_make'];
 				$data['car_make_year'] = $car_data[0]['car_make_year'];
 				$data['car_color'] = $car_data[0]['car_color'];
 				$data['reg_number'] = $car_data[0]['reg_number'];
-				$data['space_door'] = $car_data[0]['space_door'];
-				$data['space_rear'] = $car_data[0]['space_rear'];
-				$data['min_price'] = $car_data[0]['min_price'];
+                $data['car_location'] = $car_data[0]['car_location'];
 				$data['parking_day'] = $car_data[0]['parking_day'];
 				$data['parking_night'] = $car_data[0]['parking_night'];
 				$data['day_run'] = $car_data[0]['day_run'];
 				$data['week_run'] = $car_data[0]['week_run'];
 			}else{
+			    $data['has_car'] = False;
 				$data['car_id'] = '';
 				$data['car_model'] = '';
 				$data['car_make'] = '';
 				$data['car_make_year'] = '';
 				$data['car_color'] = '';
 				$data['reg_number'] = '';
-				$data['space_door'] = '';
-				$data['space_rear'] = '';
-				$data['min_price'] = '';
+                $data['car_location'] = '';
 				$data['parking_day'] = '';
 				$data['parking_night'] = '';
 				$data['day_run'] = '';

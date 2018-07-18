@@ -31,7 +31,7 @@ $this->view('includes/header');
 
                             <table id=myTable class="table">
                                 <tbody id=sticker_table>
-                                <td><?php echo $this->lang->line('no_of_sticker'); ?></td><td><?php echo $this->lang->line('place'); ?></td><td><?php echo $this->lang->line('height'); ?><br> (cm)</td><td><?php echo $this->lang->line('width'); ?><br>(cm)</td><td><?php echo $this->lang->line('unit_price'); ?><br>( per 100 cm <sup>2</sup>)</td>
+                                <td><?php echo $this->lang->line('no_of_sticker'); ?></td><td><?php echo $this->lang->line('place'); ?></td><td><?php echo $this->lang->line('width'); ?><br>(cm)</td><td><?php echo $this->lang->line('height'); ?><br> (cm)</td><td><?php echo $this->lang->line('unit_price'); ?><br>( per 100 cm <sup>2</sup>)</td>
                                 <?php
                                     $x = 0;
                                     //echo $x;
@@ -55,11 +55,12 @@ $this->view('includes/header');
                                                         <option>Rear window</option>
                                                     </select>
                                                 </td>
-                                                <td>
-                                                    <input type="text" class="form-control" id="$id2" name="sticker_height[]" placeholder="" value="$data[height_of_sticker]">
-                                                </td>
+                                                
                                                 <td>
                                                     <input type="text" class="form-control" id="$id3" name="sticker_width[]" placeholder="" value="$data[width_of_sticker]">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" id="$id2" name="sticker_height[]" placeholder="" value="$data[height_of_sticker]">
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" id="$id4" name="sticker_price[]" placeholder="" value="$data[unit_price_of_sticker]">
@@ -134,8 +135,8 @@ EOT;
                     '<option>Rear</option>'+
                     '<option>Side window</option>'+
                     '<option>Rear window</option></select></td>'+
-                    '<td><input type="text" class="form-control" id="'+(x+2)+'" name="sticker_height[]" placeholder="" value=""></td>'+
                     '<td><input type="text" class="form-control" id="'+(x+3)+'" name="sticker_width[]" placeholder="" value=""></td>'+
+                    '<td><input type="text" class="form-control" id="'+(x+2)+'" name="sticker_height[]" placeholder="" value=""></td>'+
                     '<td><input type="text" class="form-control" id="'+(x+4)+'" name="sticker_price[]" placeholder="" value="3"></td>'+
                     '<td class="remove_row"><a href="#">X</a></td></tr>');
                 x+=5;

@@ -95,7 +95,7 @@ $this->view('includes/header');
               <div class="form-group">
                 <label for="user_tel" class="col-md-2 control-label"><?php echo $this->lang->line('telephone'); ?></label>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="user_tel" name="user_tel" placeholder="Country" required="yes">
+                  <input type="text" class="form-control" id="user_tel" name="user_tel" placeholder="Telephone" required="yes">
                 </div>
               </div>
 

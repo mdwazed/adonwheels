@@ -129,7 +129,7 @@ $this->view('includes/header');
             <?php
 
             }else{
-                echo '<h4>No car found</h4>';
+                echo '<h4>No car found. Please add your car from the menu "Car Provider -> Add car"</h4>';
             }
             ?>
 
@@ -143,7 +143,7 @@ $this->view('includes/header');
 
                             <table class="table table-striped">
                                 <tbody>
-                                <tr><th><?php echo $this->lang->line('no_of_sticker'); ?></th><th><?php echo $this->lang->line('place'); ?></th><th><?php echo $this->lang->line('height'); ?><br>cm</th><th><?php echo $this->lang->line('width'); ?><br>cm</th><th><?php echo $this->lang->line('unit_price'); ?><br>per 100 cm<sup>2</sup></th></tr>
+                                <tr><th><?php echo $this->lang->line('no_of_sticker'); ?></th><th><?php echo $this->lang->line('place'); ?></th><th><?php echo $this->lang->line('width'); ?><br>cm</th><th><?php echo $this->lang->line('height'); ?><br>cm</th><th><?php echo $this->lang->line('unit_price'); ?><br>per 100 cm<sup>2</sup></th></tr>
                                 <?php
 
 
@@ -155,8 +155,8 @@ $this->view('includes/header');
                                     echo '<tr>';
                                     echo '<td>'.$sticker['no_of_sticker'].'</td>';
                                     echo '<td>'.$sticker['place_of_sticker'].'</td>';
-                                    echo '<td>'.$sticker['height_of_sticker'].'</td>';
                                     echo '<td>'.$sticker['width_of_sticker'].'</td>';
+                                    echo '<td>'.$sticker['height_of_sticker'].'</td>';
                                     echo '<td>'.$sticker['unit_price_of_sticker'].'</td>';
                                     echo '</tr>';
                                     $price = $sticker['no_of_sticker'] * (($sticker['height_of_sticker'] * $sticker['width_of_sticker'])/100) * $sticker['unit_price_of_sticker'];
