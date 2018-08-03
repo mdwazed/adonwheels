@@ -101,16 +101,13 @@
             $this->load->model('user_model');
             $result = $this->user_model->get_user($_SESSION['user_email']);
             $new_file_name = $result[0]['user_id']. random_string('alnum',10);
-            
-
-            //exit();
 
             /// /////////set image parameter to be saved   /////////////////////////////
             $config['upload_path']   = './car_images/'; 
-            $config['allowed_types'] = 'gif|jpg|png'; 
-            $config['max_size']      = 2048000; 
-            $config['max_width']     = 1024; 
-            $config['max_height']    = 768;
+            $config['allowed_types'] = 'gif|jpg|png|bmp';
+            $config['max_size']      = 3072000;
+            $config['max_width']     = 1360;
+            $config['max_height']    = 1024;
             $config['file_name']     = $new_file_name;  
             $this->load->library('upload', $config);
 

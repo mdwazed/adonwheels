@@ -38,8 +38,10 @@ $lang["add_more"] = "Füge mehr hinzu";
 
 ////////////// add car image page  /////////////////////
 $lang["upload_img_heading"] = "Hochladen von Bildern Ihres Autos";
-$lang["select_image_upload"] = "Bid auswählen zum Hochladen";
+$lang["select_image_upload"] = "Bild auswählen zum Hochladen";
 $lang["add_car_instr_heading"] = "Lesen Sie sorgfältig bevor Sie ein Neues Auto hinzufügen";
+$lang["img_dim_instr"] = "Max allowed size of photo 3 MB, width: 1360, Height: 1024. Only .jpg .bmp .gif .png files are allowed. ";
+$lang["back_to_profile"] = "Take me back to my profile";
 
 ////////////////// car provider portfolio view //////////////////
 
@@ -60,7 +62,7 @@ $lang["edit_portfolio"] = "Profil bearbeiten";
 $lang["edit_user_info"] = "Benutzerinformationen bearbeiten";
 $lang["edit_car_info"] = "Bearbeiten Sie Autoinformationen";
 
-
+$lang["no_car"] = "Kein Auto gefunden. Bitte gehen Sie zum Menu 'Autobesitzer -> Auto hinzufügen'";
 $lang["car_info"] = "Autoinformation";
 $lang["car_model"] = "Modell ";
 $lang["car_make"] = "Hersteller ";

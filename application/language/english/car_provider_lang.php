@@ -42,6 +42,8 @@ $lang["add_more"] = "Add more";
 $lang["upload_img_heading"] = "Upload image of your car taken from different perspective";
 $lang["select_image_upload"] = "Select image to upload";
 $lang["add_car_instr_heading"] = "Please read carefully before adding a new car";
+$lang["img_dim_instr"] = "Max allowed size of photo 3 MB, width: 1360, Height: 1024. Only .jpg .bmp .gif .png files are allowed. ";
+$lang["back_to_profile"] = "Take me back to my profile";
 
 ////////////////// car provider portfolio view / edit //////////////////
 $lang["user_info"] = "User Information";
@@ -62,6 +64,7 @@ $lang["edit_user_info"] = "Edit user information";
 $lang["edit_car_info"] = "Edit car information";
 
 
+$lang["no_car"] = "No car found. Please add your car from the menu 'Car provider-> Add car'";
 $lang["car_info"] = "Car information ";
 $lang["car_model"] = "Car model: ";
 $lang["car_make"] = "Car make: ";

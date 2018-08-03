@@ -90,16 +90,18 @@ class Car_provider extends CI_Controller {
 
 	public function add_car_image()
 	{
-		//echo "add car image";
-		//exit();
+		echo "add car image";
+
+
 		if(!isset($_SESSION['user_email'])){
 			redirect('/user_controller/registration','refresh');
 		}
 		$this->load->model('Car_provider_model');
 		$return_value = $this->Car_provider_model->save_car_image();
 		if($return_value == 1){
-			$data['message'] = 'Successful image upload ! Click'.anchor('car_provider/car_image_upload_loop',' here ').'to add another';
-			$this->load->view('gen_views/success_message',$data);
+			//$data['message'] = 'Successful image upload ! Click'.anchor('car_provider/car_image_upload_loop',' here ').'to add another';
+            $data['message'] = $this->lang->line('successful_img_upload');
+            $this->load->view('gen_views/success_message',$data);
 		}else{
 			//var_dump($return_value);
 			$data['message'] = $return_value['message']['error'].'Click'.anchor('car_provider/car_image_upload_loop',' here ').'to add another';

@@ -94,10 +94,10 @@ $this->view('includes/header');
                     echo '<dd>'.$row['car_make_year'].'</dd>';
                     echo '</dl>';
 
-                    echo '<dl class="dl-custom">';
+                    /*echo '<dl class="dl-custom">';
                     echo '<dt>'.$this->lang->line('door_space').'</dt>';    
                     echo '<dd>'.$row['space_door'].' Sq cm</dd>';
-                    echo '</dl>';
+                    echo '</dl>';*/
 
                     echo '<dl class="dl-custom">';
                     echo '<dt>'.$this->lang->line('parking').'</dt>';    
@@ -121,10 +121,10 @@ $this->view('includes/header');
 
                     
 
-                    echo '<dl class="dl-custom">';
+                    /*echo '<dl class="dl-custom">';
                     echo '<dt>'.$this->lang->line('rear_space').'</dt>';    
                     echo '<dd>'.$row['space_rear'].' Sq cm</dd>';
-                    echo '</dl>';
+                    echo '</dl>';*/
 
                     echo '<dl class="dl-custom">';
                     echo '<dt>'.$this->lang->line('weekly_run').'</dt>';    

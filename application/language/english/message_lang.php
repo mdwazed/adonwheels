@@ -7,3 +7,6 @@ $lang["login_failed"] = "Login failed";
 $lang["msg_passwd_reset_mail_sent"] = "Your password has been reset successfully and sent to your email. Please check you inbox. If missing, check spam folder as well.";
 $lang["msg_img_upload_error"] = "Something went wrong, Please try later";
 $lang["msg_login_first"] = "You need to login first to access this page";
+$lang['successful_img_upload'] = "Image upload was successful. click here to add another.";
+$lang['click here'] = "click here";
+$lang['to_add_another'] = "to add another";

@@ -129,7 +129,7 @@ $this->view('includes/header');
             <?php
 
             }else{
-                echo '<h4>No car found. Please add your car from the menu "Car Provider -> Add car"</h4>';
+                echo '<h4>'.$this->lang->line('no_car').'</h4>';
             }
             ?>
 

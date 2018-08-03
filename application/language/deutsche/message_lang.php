@@ -7,3 +7,6 @@ $lang["login_failed"] = "Login fehlgeschlagen";
 $lang["msg_passwd_reset_mail_sent"] = "Ihr Passwort wurde erfolgreich zurückgesetzt und an Ihre Email-Adr. gesandt. Prüfen prüfen Sie ggfls auch Ihren Spam-Ordner.";
 $lang["msg_img_upload_error"] = "Irgendetwas hat nicht funtioniert. Versuchen Sie es später noch enmal";
 $lang["msg_login_first"] = "Sie müssen sich erst einloggen, um diese Seite zu öffnen";
+$lang['successful_img_upload'] = "Image upload was successful. click here to add another.";
+$lang['click here'] = "click here";
+$lang['to_add_another'] = "to add another";
