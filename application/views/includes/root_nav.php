@@ -21,6 +21,8 @@
                     <li>
                         <a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('home'); ?></a>
                     </li>
+                    <?php if(($this->session->userdata('user_logged_in')) == 1 and ($this->session->userdata('user_type')) == 1){?>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->lang->line('car_provider'); ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -48,6 +50,8 @@
                            
                         </ul>
                     </li>
+                    <?php } ?>
+                    <?php if(($this->session->userdata('user_logged_in')) == 1 and ($this->session->userdata('user_type')) == 2){?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->lang->line('advertiser'); ?><b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -63,6 +67,7 @@
                             
                         </ul>
                     </li>
+                    <?php } ?>
                     <li>
                         <a href="<?php echo base_url('index.php/Common_controller/download'); ?>"><?php echo 'Download'; ?></a>                    
                     </li>

@@ -3,6 +3,17 @@ $lang["test_lang"] = "test lang eng";
 $lang["submit"] = "Submit";
 $lang["edit_sticker"] = "Edit Banner";
 
+//////////////// earning possibilities page ///////////////
+/// ep added to avoid conflict with field in profile page ///
+$lang['ep_earning_possibilities'] = "Earning possibilities";
+$lang['ep_company'] = "Company: ";
+$lang['ep_no_of_car'] = "No of car reqr: ";
+$lang['ep_loc'] = "Area: ";
+$lang['ep_earning'] = "earning: ";
+$lang['ep_min_year'] = "Min make: ";
+$lang['ep_space'] = "Space/car: ";
+
+
 
 ////////////////  add a car page /////////////////////////
 $lang["basic_car_info"] = "Basic information of your car";

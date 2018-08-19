@@ -19,8 +19,27 @@ class Car_provider extends CI_Controller {
 	
 	public function earning_possibilities()
 	{
-		$data['message'] = $this->lang->line('msg_page_constr_later');
-		$this->load->view('gen_views/success_message', $data);
+	    $this->load->model('Car_provider_model');
+	    $this->load->model('User_model');
+	    $result_demands = $this->Car_provider_model->earning_poss_data();
+	    $car_demands = array();
+	    foreach ($result_demands as $demand){
+            $user_info = $this->User_model->get_user_by_id($demand['req_by']);
+            $data['user_first_name'] =  $user_info[0]['first_name'];
+            $data['user_last_name'] =  $user_info[0]['last_name'];
+            $data['user_company'] = $user_info[0]['company'];
+            $data['loc'] = $demand['req_loc'];
+            $data['no_of_car'] = $demand['no_of_car'];
+            $data['earning'] = $demand['max_price'];
+            $data['space_reqr'] = $demand['space_reqr'];
+            $data['min_year'] = $demand['min_year'];
+            array_push($car_demands, $data);
+        }
+        $data2['car_demands'] = $car_demands;
+        $this->load->view('car_provider/earning_possibilities', $data2);
+//        var_dump($data2);
+//		$data['message'] = $this->lang->line('msg_page_constr_later');
+//		$this->load->view('gen_views/success_message', $data);
 	}
 
 	///////////////  add  car info  for a user  //////////////////

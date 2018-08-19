@@ -14,7 +14,7 @@ $this->view('includes/header');
                     <h4><?php echo $this->lang->line('about_us'); ?></h4>
                 </div>
                 <div class="panel-body">
-                    <h4>AD on Wheels</h4>
+                    <h4>ad on wheels</h4>
                     <?php echo $this->lang->line('address'); ?>
                 </div>
             </div>

@@ -29,6 +29,7 @@ $this->view('includes/header');
                         </div>
                         * required
                       </div>
+
                       <div class="form-group">
                         <label for="car_make_year" class="col-md-2 control-label"><?php echo $this->lang->line('min_year'); ?></label>
                         <div class="col-md-6">
@@ -41,7 +42,7 @@ $this->view('includes/header');
                         <div class="col-md-6">
                           <input type="text" class="form-control" id="space_require" name="space_require" placeholder="e.g. 900" required="yes">
                         </div>
-                        cm²
+                        cm²/car
                       </div>
 
                      
@@ -49,10 +50,18 @@ $this->view('includes/header');
                       <div class="form-group">
                         <label for="max_price" class="col-md-2 control-label"><?php echo $this->lang->line('max_price'); ?></label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" id="max_price" name="max_price" placeholder="e.g. 70" required="yes">
+                          <input type="text" class="form-control" id="max_price" name="max_price" placeholder="e.g. 5" required="yes">
                         </div>
                         €/100cm²/month
                       </div>
+
+
+                    <div class="form-group">
+                        <label for="no_of_car" class="col-md-2 control-label"><?php echo $this->lang->line('no_of_car'); ?></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="no_of_car" name="no_of_car" placeholder="e.g. 50" required="yes">
+                        </div>
+                    </div>
 
                       
                       <div class="form-group">

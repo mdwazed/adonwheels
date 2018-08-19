@@ -96,18 +96,9 @@ class Advertiser extends CI_Controller {
 			
 			$serach_latitude = $search_lat_long['latitude'];
 			$search_longitude = $search_lat_long['longitude'];
-			
-			
-
-			/*$search_longitude = $this->Common_model->get_longitude($search_location);
-			$serach_latitude = $this->Common_model->get_latitude($search_location);*/
 		
 			$current_car_pool = array();
 			$car_pool = $this->Common_model->get_selected_cars($search_year, $search_color, $search_run);
-
-			/*echo '<pre>';
-			print_r($car_pool);
-			exit();*/
 			
 			//$car_pool = $this->Common_model->get_all_car();
 			foreach ($car_pool as $key => $value) {
@@ -137,17 +128,6 @@ class Advertiser extends CI_Controller {
 			$config['suffix'] = '?search_location='.$search_location.'&search_radius='.$search_radius.'&min_year='.$search_year.'&color='.$search_color.'&min_week_run='.$search_run;
 			$config['reuse_query_string'] = TRUE;
 
-			
-
-			
-
-			//exit();
-			//$sql = "SELECT * FROM some_table WHERE id = ? AND status = ? AND author = ?";
-			//$this->db->query($sql, array(3, 'live', 'Rick'));
-
-			 /*echo "<pre>";
-			 print_r($car_pool);
-			 exit();*/
 		}
 
 		$offset = $this->uri->segment(3);
@@ -192,7 +172,7 @@ class Advertiser extends CI_Controller {
 
 		$this->load->view('advertiser/find_cars', $data);
 		
-		//$this->load->view('advertiser/auto_complete_test');
+
 	}    ////////////////////////////// End find_cars ////////////////////////////////////////////////////
 
 
@@ -288,6 +268,7 @@ class Advertiser extends CI_Controller {
 				$data['user_data']['registered_on'] = mdate($datestring, $time);
 
 
+
 				$this->load->view('advertiser/advertiser_profile', $data);
 			}
 		
@@ -297,15 +278,18 @@ class Advertiser extends CI_Controller {
 
 	    if(isset($_POST['submit'])){
 	        $this->load->model('Advertiser_model');
+
             $data['location'] = $_POST['car_location'];
             $data['min_year'] = $_POST['car_make_year'];
-            $data['space_require'] = $_POST['space_require'];
+            $data['space_reqr'] = $_POST['space_require'];
             $data['max_price'] = $_POST['max_price'];
+            $data['no_of_car'] = $_POST['no_of_car'];
             if($this->Advertiser_model->save_demands($data)){
-                $data['message'] = "Your demand has been placed successfully.'Ad on wheels' will contact you as soon a suitable match is found";
+//                exit();
+                $data['message'] = $this->lang->line("demand_success");
                 $this->load->view('gen_views/success_message',$data);
             }else{
-                $data['message'] = "We are sorry. Your demand could not be placed at the moment due to technical difficulties. please try later.";
+                $data['message'] = $this->lang->line("demand_failed");
                 $this->load->view('gen_views/success_message',$data);
             }
 
@@ -314,6 +298,37 @@ class Advertiser extends CI_Controller {
         }
 
 	}
+
+	public function upload_logo(){
+//        echo 'upload logo';
+        $this->load->helper('string');
+        $this->load->model('user_model');
+        $result = $this->user_model->get_user($_SESSION['user_email']);
+        $new_file_name = $result[0]['user_id'];
+        echo $new_file_name;
+        $config['upload_path'] = './coy_logos/';
+        $config['allowed_types'] = 'gif|jpg|png|bmp';
+        $config['max_size'] = 1000000;
+        $config['max_width'] = 1024;
+        $config['max_height'] = 1024;
+        $config['file_name'] = $new_file_name;
+        $config['overwrite'] = True;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('logo'))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            var_dump($error);
+
+//            $this->load->view('upload_form', $error);
+        }
+        else
+        {
+//            echo $this->upload->data('filename');
+            $this->show_logged_in_advertiser_profile();
+        }
+    }
 	
 
 }

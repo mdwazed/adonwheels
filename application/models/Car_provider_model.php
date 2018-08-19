@@ -118,7 +118,7 @@
 
             else {
 
-                //////////////// store car image information to car_images table   ////////////////////
+                //////////////// store car image information to car_images table in database  ////////////////////
                 $data['image_name'] = $this->upload->data('file_name');
                 
 
@@ -267,6 +267,14 @@
             if($this->db->delete('car_images', array('owner_id' => $user_id, 'image_name' => $image_name))){
                 unlink($_SERVER['DOCUMENT_ROOT'].'/car_images/'.$image_name);
             }
+        }
+
+
+        ////////////// data fetch for earning possibilities page //////////////
+        public function earning_poss_data(){
+            $query =$this->db->get('advance_car_demands');
+            $result = $query->result_array();
+            return $result;
         }
 
         

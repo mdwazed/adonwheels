@@ -14,16 +14,30 @@ class Advertiser_model extends CI_Model {
 
 	////////// save advanced demand if suitable car not found in pool  //////////////
     public function save_demands($data){
-	    $req_by = '10';
-        $save_data = array(
-            'req_by' => '',
-            'req_loc' => 'location',
-            'min_year' => 'min_year',
-            'space_reqr' => 'space_reqr',
-            'max_price' => 'max_price'
-        );
-        exit();
-	    return true;
+	    $this->load->model('User_model');
+
+	    if(!$this->session->user_type == 2){
+	        exit("not advertiser");
+        }else{
+            $req_by = $this->User_model->get_logged_in_user_id();
+           $user_id = $req_by[0]['user_id'];
+            $save_data = array(
+                'req_by' => $user_id,
+                'req_loc' => $data['location'],
+                'min_year' => $data['min_year'],
+                'space_reqr' => (int)$data['space_reqr'],
+                'max_price' => $data['max_price'],
+                'no_of_car' =>$data['no_of_car']
+            );
+
+            if($this->db->insert('advance_car_demands', $save_data)){
+                return true;
+
+            }else{
+                return false;
+            }
+        }
+
     }
 
 

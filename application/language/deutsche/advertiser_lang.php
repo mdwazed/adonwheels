@@ -26,11 +26,15 @@ $lang["car_demands"] = "Nachfrage nach Autos";
 $lang["car_demand_description"] = "Falls unser Autoangebot Ihre genauen Anforderungen nicht erfüllt, können Sie dennoch Ihre Nchfrage formulieren. Wir werden unser Bestes tun, Ihre Anforderungen zu erfüllen und werden Sie informieren.";
 $lang["space_require"] = "Flächenbedarf";
 $lang["max_price"] = "Max. Preis";
+$lang["no_of_car"] = "Anzahl der benötigten Autos";
+$lang["demand_success"] = "Ihre Anfrage wurde erfolgreich gestellt. 'ad on wheels' wird sich mit Ihnen in Verbindung setzen, sobald ein passendes Spiel gefunden wird";
+$lang["demand_failed"] = "Wir entschuldigen uns. Ihre Anfrage konnte aufgrund technischer Schwierigkeiten derzeit nicht gestellt werden. bitte versuch es später.";
 
 
 //////////// advertiser portfolio page ////////
 $lang["portfolio_of"] = "Profil an ";
 $lang["pers_info"] = "Persönliche Informationen";
+$lang["company"] = "Firma";
 $lang["last_name"] = "Familienname:";
 $lang["first_name"] = "Vorname:";
 $lang["email"] = "Email: ";
@@ -40,6 +44,8 @@ $lang["country"] = "Land:";
 $lang["zip_code"] = "PLZ: ";
 $lang["tel"] = "Telefon: ";
 $lang["member_since"] = "Mitglied seit: ";
+$lang["active_contract"] = "Aktiver vertrag";
+$lang["pending_contract"] = "öffnen vertrag";
 
 
 /////////////////  show car details page ///////////////////

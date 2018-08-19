@@ -3,6 +3,16 @@ $lang["test_lang"] = "test lang deutsche";
 $lang["submit"] = "Absenden";
 $lang["edit_sticker"] = "Banner bearbeiten";
 
+//////////////// earning possibilities page ///////////////
+/// ep added to avoid conflict with field in profile page ///
+$lang['ep_earning_possibilities'] = "Verdienstmöglichkeiten";
+$lang['ep_company'] = "Firmenname: ";
+$lang['ep_no_of_car'] = "Auto brauchen: ";
+$lang['ep_loc'] = "Bereich: ";
+$lang['ep_earning'] = "Verdienen: ";
+$lang['ep_min_year'] = "Min bau jare: ";
+$lang['ep_space'] = "Raum/auto: ";
+
 ////////////////  add a car page /////////////////////////
 $lang["basic_car_info"] = "Basis Information über Ihr Auto";
 $lang["read_instr1"] = "Lesen Sie diese Hinweise";
@@ -40,8 +50,8 @@ $lang["add_more"] = "Füge mehr hinzu";
 $lang["upload_img_heading"] = "Hochladen von Bildern Ihres Autos";
 $lang["select_image_upload"] = "Bild auswählen zum Hochladen";
 $lang["add_car_instr_heading"] = "Lesen Sie sorgfältig bevor Sie ein Neues Auto hinzufügen";
-$lang["img_dim_instr"] = "Max allowed size of photo 3 MB, width: 1360, Height: 1024. Only .jpg .bmp .gif .png files are allowed. ";
-$lang["back_to_profile"] = "Take me back to my profile";
+$lang["img_dim_instr"] = "Max. Erlaubte Größe des Fotos 3 MB, Breite: 1360, Höhe: 1024. Nur .jpg .bmp .gif .png files sind erlaubt.";
+$lang["back_to_profile"] = "zurück zum Profil";
 
 ////////////////// car provider portfolio view //////////////////
 

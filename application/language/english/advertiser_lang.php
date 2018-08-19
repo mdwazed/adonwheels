@@ -26,11 +26,15 @@ $lang["car_demands"] = "Car demands";
 $lang["car_demand_description"] = "In case our cars pool doesn't satisfy your precise requirements, You can request for car in advance. We will try our best to find cars which satisfy your needs and notify you accordingly.";
 $lang["space_require"] = "Space require";
 $lang["max_price"] = "Max price ";
+$lang["no_of_car"] = "No of car require ";
+$lang["demand_success"] = "Your demand has been placed successfully.'Ad on wheels' will contact you as soon a suitable match is found";
+$lang["demand_failed"] = "We are sorry. Your demand could not be placed at the moment due to technical difficulties. please try later.";
 
 
 //////////// advertiser portfolio page ////////
 $lang["portfolio_of"] = "Profile of ";
 $lang["pers_info"] = "Personal Information";
+$lang["company"] = "Company";
 $lang["last_name"] = "Last Name: ";
 $lang["first_name"] = "First Name: ";
 $lang["email"] = "Email: ";
@@ -40,6 +44,8 @@ $lang["country"] = "Country: ";
 $lang["zip_code"] = "Zip code: ";
 $lang["tel"] = "Telephone: ";
 $lang["member_since"] = "Member Since: ";
+$lang["active_contract"] = "Active contract";
+$lang["pending_contract"] = "Pending contract";
 
 
 

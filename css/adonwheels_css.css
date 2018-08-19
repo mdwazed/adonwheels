@@ -25,7 +25,7 @@ dd {
 @media (min-width: 768px) {
   .dl-custom dt {
     float: left;
-    width: 100px;
+    width: 150px;
     overflow: hidden;
     clear: left;
     text-align: left;
