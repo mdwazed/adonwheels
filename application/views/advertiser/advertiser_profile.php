@@ -55,7 +55,7 @@ $this->view('includes/header');
                         </dl>
                     </div>
                     <div class="col-md-4">
-                        <img style="max-width: 100%;" src="<?php echo base_url('coy_logos/'. $user_data['user_id'].'.jpg'); ?>" alt="logo">
+                        <img style="max-width: 100%;" src="<?php echo base_url('coy_logos/'. $user_data['company_logo']); ?>" alt="logo">
                         <?php echo form_open_multipart(base_url('index.php/advertiser/upload_logo'));?>
                         <input type="file" name="logo" size="20" />
                         <input type="submit" value="upload" />

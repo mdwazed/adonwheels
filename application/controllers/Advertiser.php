@@ -303,14 +303,14 @@ class Advertiser extends CI_Controller {
 //        echo 'upload logo';
         $this->load->helper('string');
         $this->load->model('user_model');
+        $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
         $result = $this->user_model->get_user($_SESSION['user_email']);
-        $new_file_name = $result[0]['user_id'];
-        echo $new_file_name;
+        $new_file_name = $result[0]['user_id'].'.'.$ext;
         $config['upload_path'] = './coy_logos/';
         $config['allowed_types'] = 'gif|jpg|png|bmp';
-        $config['max_size'] = 1000000;
-        $config['max_width'] = 1024;
-        $config['max_height'] = 1024;
+        $config['max_size'] = 4000000;
+        $config['max_width'] = 2048;
+        $config['max_height'] = 2048;
         $config['file_name'] = $new_file_name;
         $config['overwrite'] = True;
 
@@ -326,7 +326,12 @@ class Advertiser extends CI_Controller {
         else
         {
 //            echo $this->upload->data('filename');
-            $this->show_logged_in_advertiser_profile();
+            if($this->user_model->add_advertisers_logo($result[0]['user_id'], $new_file_name)){
+                $this->show_logged_in_advertiser_profile();
+            }else{
+                echo "error updating logo in database";
+            }
+
         }
     }
 	

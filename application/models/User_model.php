@@ -165,5 +165,18 @@
             }
 
         }
+
+        public function add_advertisers_logo($user_id, $file_name){
+
+            $this->db->set('company_logo', $file_name);
+            $this->db->where('user_id', $user_id);
+            if($this->db->update('users')){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
     }
 ?>

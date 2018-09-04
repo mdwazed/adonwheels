@@ -28,6 +28,7 @@ class Car_provider extends CI_Controller {
             $data['user_first_name'] =  $user_info[0]['first_name'];
             $data['user_last_name'] =  $user_info[0]['last_name'];
             $data['user_company'] = $user_info[0]['company'];
+            $data['company_logo'] = $user_info[0]['company_logo'];
             $data['loc'] = $demand['req_loc'];
             $data['no_of_car'] = $demand['no_of_car'];
             $data['earning'] = $demand['max_price'];

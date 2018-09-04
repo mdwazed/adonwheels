@@ -49,7 +49,7 @@ $this->view('includes/header');
 
                         echo "</div>";
                         echo '<div class= "col-md-6">';
-                        echo '<img style="max-width: 70%;" align= "right" src="'. base_url('coy_logos/12.jpg').'" alt="logo">';
+                        echo '<img style="max-width: 70%;" align= "right" src="'. base_url('coy_logos/'.$car_demand['company_logo']).'" alt="logo">';
                         echo "</div></div></div>";
 
                     }

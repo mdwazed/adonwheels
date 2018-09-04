@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_controller extends CI_Controller {
 
+    public function __construct(){
+        parent::__construct();
+        $this->lang->load('root_nav',$this->session->site_lang);
+        $this->lang->load('admin',$this->session->site_lang);
+        $this->lang->load('message',$this->session->site_lang);
+    }
+
 	public function index()
 	{
 		
@@ -106,7 +113,15 @@ class Admin_controller extends CI_Controller {
 	}
 
 	public function show_clients_messages(){
-	    plrint('show clients messages');
+        $this->load->model('Admin_model');  // to get the req info
+//	    print('show clients messages');
+        $data['client_messages'] = $this->Admin_model->show_clients_message();
+
+        $send_data['returned_page'] = $this->load->view('admin/client_message',$data,TRUE);
+        $this->load->view('admin/admin_dashboard', $send_data);
+//        $this->load->view('admin/client_message', $data);
+
+
     }
 
 }

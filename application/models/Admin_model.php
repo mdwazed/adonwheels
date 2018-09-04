@@ -8,7 +8,14 @@ class Admin_model extends CI_Model {
 		$query = $this->db->get('ad_request');
 		$query_result = $query->result_array();
 		return $query_result;
-	}	
+	}
+
+	public function show_clients_message(){
+        $this->db->where('action_taken',0);
+        $query = $this->db->get('clients_message');
+        $query_result = $query->result_array();
+        return $query_result;
+    }
 
 }
 
