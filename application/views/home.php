@@ -3,17 +3,25 @@
     $this->view('includes/header');     
 
 ?>
-
-
-
 <body>
-   <?php $this->view('includes/root_nav'); ?>
-   <?php $this->view('includes/carousel'); ?>
+<?php $this->view('includes/root_nav'); ?>
+<?php //$this->view('includes/carousel'); ?>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="banner">
+                    <img class="banner-image" src="<?php echo base_url('images/banner2.png'); ?>" >
+                </div>
+            </div>
+        </div>
+    </div>
+
 
    
 
     <!-- Page Content -->
     <div class="container">
+
 
         <!-- Marketing Icons Section -->
         <div class="row">
@@ -21,7 +29,6 @@
                 <h1 class="alert alert-info text-center">
                     <?php echo $this->lang->line('welcome'); ?>
                 </h1>
-
             </div>
            
             <div class="col-md-4">

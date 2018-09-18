@@ -32,7 +32,7 @@
     <link href="<?php echo base_url('css/modern-business.css'); ?>" rel="stylesheet" type="text/css">
 
     <!-- image gallary css -->
-    <link href="<?php echo base_url('/css/adonwheels_css.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('/css/adonwheels_css.css?version=52'); ?>" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url('/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">

@@ -115,7 +115,7 @@
             $this->db->select('user_id');
             $query = $this->db->get_where('users', array('user_email'=> $_SESSION['user_email']));
             $result = $query->result_array();
-            return $result;
+            return $result; //return user id as array extract before use//
         }
 
         public function update_user($user_id)
@@ -123,14 +123,27 @@
             $data = array();
             $data['last_name'] = $this->input->post('last_name');
             $data['first_name'] = $this->input->post('first_name');
-            //$data['user_email'] = $this->input->post('email');
-            //$data['password'] = md5($this->input->post('password'));
             $data['user_address'] = $this->input->post('user_address');
             $data['user_city'] = $this->input->post('user_city');
             $data['user_zip'] = $this->input->post('user_zip');
             $data['country'] = $this->input->post('user_country');
-            $data['user_type'] = $this->input->post('user_type');
-            
+
+            $this->db->where('user_id',$user_id);
+            return $this->db->update('users',$data);
+        }
+
+        public function update_advertiser($user_id)
+        {
+            $data = array();
+            $data['company'] = $this->input->post('company');
+            $data['last_name'] = $this->input->post('last_name');
+            $data['first_name'] = $this->input->post('first_name');
+            $data['user_address'] = $this->input->post('address');
+            $data['user_city'] = $this->input->post('city');
+            $data['user_zip'] = $this->input->post('zip_code');
+            $data['country'] = $this->input->post('country');
+            $data['user_tel'] = $this->input->post('telephone');
+
             $this->db->where('user_id',$user_id);
             return $this->db->update('users',$data);
         }

@@ -274,6 +274,37 @@ class Advertiser extends CI_Controller {
 		
 	}
 
+	public function edit_logged_in_advertiser_profile(){
+        if(!isset($this->session->user_email))
+        {
+            $data['message'] = $this->lang->line('msg_login_first');
+            $this->load->view('gen_views/success_message', $data);
+
+        }else{
+            if(isset($_POST['submit'])){
+                $this->load->model('User_model');
+                $user_id = $this->User_model->get_logged_in_user_id();
+                $user_id = $user_id[0]['user_id'];
+//                exit();
+                if($this->User_model->update_advertiser($user_id) >0){
+                    $this->show_logged_in_advertiser_profile();
+                }else{
+                    $data['message'] = $this->lang->line('msg_advertiser_update_failed');
+                    $this->load->view('gen_views/success_message', $data);
+                }
+            }else{
+                $this->load->helper('date');
+                $this->load->model('User_model');
+                $data['user_data'] = $this->User_model->get_logged_in_user_data();
+                $datestring = '%d %M %Y';
+                $time = time($data['user_data']['registered_on']);
+                $data['user_data']['registered_on'] = mdate($datestring, $time);
+                $this->load->view('advertiser/edit_advertiser_profile', $data);
+            }
+
+        }
+    }
+
 	public function car_demands(){
 
 	    if(isset($_POST['submit'])){

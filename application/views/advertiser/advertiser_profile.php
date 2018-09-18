@@ -62,7 +62,9 @@ $this->view('includes/header');
                         </form>
 
                     </div>
-
+                </div>
+                <div class="panel-footer">
+                    <a class="btn btn-default" href=<?php echo base_url('index.php/advertiser/edit_logged_in_advertiser_profile') ?> role="button">Edit</a>
                 </div>
             </div>           
             

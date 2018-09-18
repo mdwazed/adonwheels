@@ -22,14 +22,14 @@ $this->view('includes/header');
                <div class="form-group">
                    <label for="user_type" class="col-md-2 control-label"><?php echo $this->lang->line('user_type'); ?></label>
                    <div class="col-md-6">
-                       <select class="form-control" id="user_type" name="user_type" title="If you are a potential clients who would like to let us put banner on your car then select 'car provider'. If you are interested for advertisement on our car pool please select 'advertiser'">
+                       <select class="form-control" id="user_type" name="user_type" onchange="toggleCompany()" title="If you are a potential clients who would like to let us put banner on your car then select 'car provider'. If you are interested for advertisement on our car pool please select 'advertiser'">
                            <option value="1"><?php echo $this->lang->line('car_provider'); ?></option>
-                           <option value="2"><?php echo $this->lang->line('advertiser'); ?></option>
+                           <option value="2" selected><?php echo $this->lang->line('advertiser'); ?></option>
                        </select>
                    </div>
                </div>
 
-               <div class="form-group">
+               <div class="form-group" id="company_div">
                    <label for="company" class="col-md-2 control-label"><?php echo $this->lang->line('company'); ?></label>
                    <div class="col-md-6">
                        <input type="text" class="form-control" id="company" name="company" title="Only fill up if you belongs to a company. private user please keep it blank">
@@ -142,6 +142,15 @@ $this->view('includes/header');
 
 
     <script>
+        ////// display company based on user type selection //////
+        function toggleCompany(){
+            val = $("#user_type").val();
+            if(val == 1){
+                $("#company_div").hide();
+            }else{
+                $("#company_div").show();
+            }
+        };
     
 		/////// fb log in script /////////
     	function fbLogOut(){

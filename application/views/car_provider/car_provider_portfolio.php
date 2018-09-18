@@ -24,10 +24,7 @@ $this->view('includes/header');
                     <dt><?php echo $this->lang->line('first_name'); ?></dt>
                     <dd><?php echo $first_name; ?></dd>
                 </dl>
-                <dl class="dl-horizontal">
-                    <dt><?php echo $this->lang->line('company'); ?></dt>
-                    <dd><?php echo $company; ?></dd>
-                </dl>
+
                 <dl class="dl-horizontal">
                     <dt><?php echo $this->lang->line('email'); ?></dt>
                     <dd><?php echo $user_email; ?></dd>
