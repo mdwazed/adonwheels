@@ -21,6 +21,19 @@
                     <li>
                         <a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('home'); ?></a>
                     </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->lang->line('market'); ?> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?php echo base_url('index.php/car_provider/earning_possibilities'); ?>"><?php echo $this->lang->line('demand'); ?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url('index.php/advertiser/find_cars'); ?>"><?php echo $this->lang->line('offer'); ?></a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <?php if(($this->session->userdata('user_logged_in')) == 1 and ($this->session->userdata('user_type')) == 1){?>
 
                     <li class="dropdown">

@@ -15,3 +15,7 @@ $lang["log_out"] = "Log Out";
 $lang["edit_profile"] = "Edit Profile";
 $lang["edit_sticker"] = "Edit Sticker";
 $lang["delete_image"] = "Delete Image";
+$lang["market"] = "Market";
+$lang["demand"] = "Demand";
+$lang["offer"] = "offer";
+
