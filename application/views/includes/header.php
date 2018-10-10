@@ -22,7 +22,7 @@
     <meta name="description" content="autowerbung">
     <meta name="author" content="">
 
-    <title>Add on wheels | autowerbung im Deutschland </title>
+    <title>Ad on wheels | autowerbung im Deutschland </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css">

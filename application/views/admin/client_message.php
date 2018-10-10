@@ -1,11 +1,4 @@
-<?php
-$this->view('includes/header');
-?>
-    <body>
 
-
-<?php $this->view('includes/root_nav'); ?>
-    <hr>
     <!-- Page Content -->
 <div class="container">
     <div class="col-md-8">
@@ -26,16 +19,21 @@ $this->view('includes/header');
             echo '<dd>'.$client_message['msg_from'].'</dd>';
             echo '</dl>';
 
-
             echo '<dl class="dl-custom">';
             echo '<dt>'.$this->lang->line('msg_body').'</dt>';
             echo '<dd>'.$client_message['msg_body'].'</dd>';
             echo '</dl>';
 
+            echo '<dl class="dl-custom">';
+            echo '<dt>'.$this->lang->line('msg_remarks').'</dt>';
+            echo '<dd>'.$client_message['remarks'].'</dd>';
+            echo '</dl>';
 
+            echo "</div></div>";
 
-
-            echo "</div></div></div>";
+            echo '<div class="panel-footer">';
+            echo anchor('Admin_controller/dismiss_clients_message?id='.$client_message['msg_id'], 'Dismiss');
+            echo '</div></div>';
 
         }
         ?>
@@ -43,4 +41,3 @@ $this->view('includes/header');
         <hr>
     </div>
 
-<?php $this->view('includes/footer') ?>

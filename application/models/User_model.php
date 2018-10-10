@@ -101,6 +101,13 @@
 
         }
 
+        public function get_all_user(){
+            $this->db->order_by('last_name','asc');
+            $query = $this->db->get('users');
+            return $query->result_array();
+
+        }
+
         ////// returns user deatils info 
         public function get_logged_in_user_data(){
             $email = $_SESSION['user_email'];
@@ -189,6 +196,10 @@
                 return false;
             }
 
+        }
+
+        public function delete_user($id){
+            $this->db->delete('users', array('user_id' => $id));
         }
 
     }

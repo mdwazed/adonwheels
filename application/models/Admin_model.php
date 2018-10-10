@@ -17,6 +17,11 @@ class Admin_model extends CI_Model {
         return $query_result;
     }
 
+    public function dismiss_clients_message($msg_id){
+	    $this->db->where('msg_id', $msg_id);
+        $this->db->update('clients_message', array('action_taken' => 1));
+    }
+
 }
 
 /* End of file Admin_model.php */

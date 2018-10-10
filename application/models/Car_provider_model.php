@@ -75,6 +75,10 @@
             return $this->db->insert('cars',$data);
         }
 
+        public function delete_car($owner_id){
+            $this->db->delete('cars', array('owner_id'=>$owner_id));
+        }
+
 
         ///////// update car info based on car_id //////////////////////////
         public function update_car($car_id){

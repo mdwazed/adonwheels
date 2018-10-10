@@ -5,9 +5,12 @@ class Admin_controller extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->lang->load('root_nav',$this->session->site_lang);
+        $this->lang->load('root_nav',$this->session->site_lang); //same lang file for root nav and admin nav word
         $this->lang->load('admin',$this->session->site_lang);
         $this->lang->load('message',$this->session->site_lang);
+        if(!($_SESSION['user_logged_in']==1 and $_SESSION['user_type']==3)){
+            redirect('user_controller/registration');
+        }
     }
 
 	public function index()
@@ -88,17 +91,7 @@ class Admin_controller extends CI_Controller {
 		}
 
 		$data['request_data'] = $request_data;
-		/*echo '<pre>';
-		print_r($data);*/
 
-		/*$query_string = 'SELECT users.user_id, users.first_name, users.last_name FROM users INNER JOIN ad_request ON users.user_id = ad_request.requester_id WHERE ad_request.pending = 1';
-		$query = $this->db->query($query_string);
-		$query_result = $query->result_array();*/
-
-
-		/*echo '<pre>';
-		print_r($pending_requests);
-		exit();*/
 		$send_data['returned_page'] = $this->load->view('admin/pending_request',$data,TRUE);
 		$this->load->view('admin/admin_dashboard', $send_data);
 	}
@@ -120,9 +113,55 @@ class Admin_controller extends CI_Controller {
         $send_data['returned_page'] = $this->load->view('admin/client_message',$data,TRUE);
         $this->load->view('admin/admin_dashboard', $send_data);
 //        $this->load->view('admin/client_message', $data);
+    }
 
+    public function dismiss_clients_message(){
+        $msg_id = $_GET['id'];
+        $this->load->model('Admin_model');
+        $this->Admin_model->dismiss_clients_message($msg_id);
+        $this->show_clients_messages();
+    }
+
+    public function delete_user(){
+        if(isset($_GET['id'])){
+            $user_id = $_GET['id'];
+            $this->load->model('User_model');
+            $this->load->model('Car_provider_model');
+
+            $this->User_model->delete_user($user_id);
+            $this->Car_provider_model->delete_car($user_id);
+            $this->Car_provider_model->delete_sticker($user_id);
+            $car_images_name = $this->Car_provider_model->get_car_images_name($user_id);
+            foreach ($car_images_name as $car_image_name){
+                $image_name = $car_image_name['image_name'];
+                $this->Car_provider_model->delete_car_image($user_id, $image_name);
+            }
+
+        }
+//        get list of user with details links
+//        delete user from the db->users table
+//        delete user car from db->cars table
+//        delete sticker info from db->sticker info table
+//        delete car images from db->car images table and car image folder
+        $this->load->model('User_model');
+        $data['user_list'] = $this->User_model->get_all_user();
+
+        $send_data['returned_page'] = $this->load->view('admin/show_user_list',$data,TRUE);
+        $this->load->view('admin/admin_dashboard', $send_data);
+
+
+//        die();
 
     }
+
+    public function test(){
+        echo 'hello';
+        echo '<pre>'; print_r($this->session->all_userdata());
+        echo $_SESSION['user_logged_in'];
+        exit;
+    }
+
+
 
 }
 
